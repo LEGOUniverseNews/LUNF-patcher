@@ -28,14 +28,14 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
     
       // Draw it
       feedControl.draw(document.getElementById("content"));
-      
-      google.setOnLoadCallback(OnLoad);
 
       // if more than one with a class
       $("a.gf-title").each(function() {
           $(this).attr("target","_blank");
       });
-    }      
+    }
+   
+    google.setOnLoadCallback(OnLoad);
     </script>
   </head>
   <body style="font-family: Arial; border: 0 none; color: #C6C6C6;">
