@@ -47,8 +47,9 @@ text-decoration: none;
 /*feed_item_description:active*/ 
 #content.feed_item_description { 
 font-family: 'Nunito';
-font-size: 0.6em;
-color: white;
+font-size: 12px;
+/* color: white; */
+color: rgb(000,255,000);
 }
 
 div.feed_item_title { 
@@ -75,5 +76,5 @@ display: none !important;
 #container { 
 color: #C6C6C6;
 font-family: 'Nunito';
-font-size: 0.8em;
+font-size: 12px;
 }
