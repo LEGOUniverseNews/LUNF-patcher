@@ -15,7 +15,7 @@ padding: 0 0 0px 0px;
 #content.feed_item_title {
 margin: 1px 20px 1px 3px;
 padding: 1px 0 1px 3px;
-color:#FFFFFF; 
+color: #C6C6C6; 
 font-weight:bold;
 }
 
@@ -27,41 +27,34 @@ text-decoration: none;
 
 /*feed_item_title:visited*/
 #content.feed_item_title a:visited {
-color: #FFFFFF;
+color: #C6C6C6;
 text-decoration: none;
 }
 
 /*feed_item_title:hover*/
 #content.feed_item_title a:hover {
-color: #FFFFFF;
+color: #C6C6C6;
 text-decoration: none;
 }
 
 /*feed_item_title:active*/
 #content.feed_item_title a:active { 
-color: #FFFFFF;
+color: #C6C6C6;
+color: #C6C6C6;
 text-decoration: none;
 }
 
 /*feed_item_description:active*/ 
 #content.feed_item_description { 
-margin: 0 0 0 3px;
-padding: 0 0 0 3px;
-color: #FFFFFF;
-line-height: 135%;
+font-family: 'Nunito';
+font-size: 0.6em;
+color: white;
 }
 
 div.feed_item_title { 
 color: #C6C6C6;
 font-family: 'Nunito';
 }
-
-/* Resize header font
-a.gf-title {
-color: #C6C6C6;
-font-family: 'Nunito';
-font-size: 0.8em;
-} */
 
 /* Resize summary font */
 .gf-snippet{
