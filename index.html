@@ -5,52 +5,48 @@
     <title>LUNF Patcher</title>
     <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
 </head>
-    
+
 <body>
     <!-- //TODO Remove this wrapping div or put it in CSS -->
     <div style="background-color:transparent;text-align:left;margin-left:auto;margin-right:auto;position:relative;width:800px;height:360px;">
-        <!-- <img src="images/background.png" width="800" height="326" border="0" id="pic_2" name="pic_2" title="" alt="" style="z-index:2" /> -->
+        <!-- CSS background shape -->
         <div id="background">
         </div>
-        <div style="position:absolute; left:38px; top:49px; width:355px; height:289px;">
-            <iframe id="yt-video" width="330" height="270" allowfullscreen>
+
+        <!-- YouTube embed player. See js/script.js for details. -->
+        <div id="video-div">
+            <iframe id="yt-video" allowfullscreen>
             </iframe>
         </div>
 
-        <div style="position:absolute; left:414px; top:91px; width:335px; height:196px;">
-            <!-- scrolling="no" is still required because some browers STILL do not support the CSS version *sigh* -->
-            <iframe id="feed" scrolling="no" src="pages/feed.html">
-            </iframe>
-        </div>
+        <!-- scrolling="no" is still required because some browers STILL do not support the CSS version *sigh* -->
+        <iframe id="feed" scrolling="no" src="pages/feed.html">
+        </iframe>
 
         <!-- LUN Logo -->
-        <div style="position:absolute; left:359px; top:0px; width:83px; height:83px;">
-            <map id="map0" name="map0">
-                <area shape="poly" coords="6,82,0,76,0,83,15,83" href="pages/video.html" alt="">
-            </map>
-            <img src="images/lun128.png" width="83" height="83" id="pic_1" alt="" usemap="#map0">
-        </div>
+        <img id="LUN-logo" alt="LEGO Universe News!" width="83" src="images/lun128.png" />
 
         <!-- News Header -->
         <div style="position:absolute; left:438px; top:58px; width:346px; height:29px;">
-            <img src="images/NewsHeader.png" width="346" height="29" id="pic_4" alt="">
+            <img src="images/NewsHeader.png" width="346" height="29" id="News-image" alt="">
         </div>
 
         <div id="forum-buttons">
             <!-- LUNF FAQ button -->
             <a href="http://legouniversenews.forummotion.com/faq">
                 <img id="faq-button" alt="LUNF FAQ" width="69" src="images/FAQ.png" /></a>
-    
+
             <!--  LUNF Rules button -->
             <a href="http://legouniversenews.forummotion.com/t1-rules">
                 <img id="rules-button" alt="LUNF Rules" width="69" src="images/Rules.png" /></a>
 
             <!-- LUNF Staff Button -->
             <a href="http://legouniversenews.forummotion.com/h8-staff-members">
-                <img id="staff-button" alt="LUNF Staff Members"  width="69" src="images/Staff.png" /></a>
+                <img id="staff-button" alt="LUNF Staff Members" width="69" src="images/Staff.png" /></a>
         </div>
     </div>
-    
+
+<!-- Pull in jQuery and our own JavaScript -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </body>

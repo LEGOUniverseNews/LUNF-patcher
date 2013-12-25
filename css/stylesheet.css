@@ -1,26 +1,20 @@
 @charset "UTF-8";
+/*
+    LUNF Patcher
 
+    Created 2013-2014 Triangle717 & rioforce
+    <http://Triangle717.WordPress.com/>
+    <http://rioforce.WordPress.com/>
+*/
+
+ /* TODO http://pxtoem.com/ */
+
+html { position:relative; }
 body {
     position:relative;
     background-color:transparent;
 /*    text-align:center;*/
 /*    height:360px;*/
-}
-
-/* Remove scrollbars on the iframes */
-iframe {
-    overflow: hidden;
-    border:none;
-}
-
-#yt-video {
-    width:355px;
-    height:289px;
-}
-
-#feed {
-    width:335px;
-    height:196px;
 }
 
 /* Gradient blank background */
@@ -36,6 +30,50 @@ iframe {
     max-width:745px;*/
     background:linear-gradient(#252525, #000000);
     border-radius:35px;
+}
+
+/* Remove scrollbars on the iframes */
+iframe {
+    overflow: hidden;
+    border:none;
+}
+
+/* The YouTube embed player is wrapped in this,
+but removing it breaks everything else
+// FUTURE Remove it?
+*/
+#video-div {
+    position:absolute;
+    left:40px;
+    top:50px;
+}
+
+/* Size and position of YouTube embed player */
+#yt-video {
+    position:relative;
+    width:355px;
+    top:10px;
+    left:2px;
+    height:270px;
+}
+
+/* Size of RSS feed iframe from LUN */
+#feed {
+/*  position:relative;
+    bottom:215px; */
+
+    position:absolute;
+    width:335px;
+    height:196px;
+    left:414px;
+    top:91px;
+}
+
+/* LUN Logo at the top */
+#LUN-logo {
+    position:absolute;
+    left:359px;
+    top:0px;
 }
 
 #faq-button {
