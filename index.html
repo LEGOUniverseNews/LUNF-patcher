@@ -13,12 +13,13 @@
         <div id="background">
         </div>
         <div style="position:absolute; left:38px; top:49px; width:355px; height:289px;">
-            <iframe id="video" name="video" src="pages/video.html" allowtransparency="true" style="width:355px; height:289px;" frameborder="0" scrolling="no">
+            <iframe id="yt-video" width="330" height="270" allowfullscreen>
             </iframe>
         </div>
 
         <div style="position:absolute; left:414px; top:91px; width:335px; height:196px;">
-            <iframe id="feed" name="feed" src="pages/feed.html" allowtransparency="true" style="width:335px; height:196px;" frameborder="0" scrolling="no">
+            <!-- scrolling="no" is still required because some browers STILL do not support the CSS version *sigh* -->
+            <iframe id="feed" scrolling="no" src="pages/feed.html">
             </iframe>
         </div>
 
@@ -27,29 +28,26 @@
             <map id="map0" name="map0">
                 <area shape="poly" coords="6,82,0,76,0,83,15,83" href="pages/video.html" alt="">
             </map>
-            <img src="images/lun128.png" width="83" height="83" border="0" id="pic_1" name="pic_1" title="" alt="" usemap="#map0">
+            <img src="images/lun128.png" width="83" height="83" id="pic_1" alt="" usemap="#map0">
         </div>
 
         <!-- News Header -->
         <div style="position:absolute; left:438px; top:58px; width:346px; height:29px;">
-            <img src="images/NewsHeader.png" width="346" height="29" border="0" id="pic_4" name="pic_4" title="" alt="">
+            <img src="images/NewsHeader.png" width="346" height="29" id="pic_4" alt="">
         </div>
 
         <div id="forum-buttons">
             <!-- LUNF FAQ button -->
             <a href="http://legouniversenews.forummotion.com/faq">
-                <img id="faq-button" alt="LUNF FAQ" width="69" src="images/FAQ.png" />
-            </a>
+                <img id="faq-button" alt="LUNF FAQ" width="69" src="images/FAQ.png" /></a>
     
             <!--  LUNF Rules button -->
             <a href="http://legouniversenews.forummotion.com/t1-rules">
-                <img id="rules-button" alt="LUNF Rules" width="69" src="images/Rules.png" />
-            </a>
-    
+                <img id="rules-button" alt="LUNF Rules" width="69" src="images/Rules.png" /></a>
+
             <!-- LUNF Staff Button -->
             <a href="http://legouniversenews.forummotion.com/h8-staff-members">
-                <img id="staff-button" alt="LUNF Staff Members"  width="69" src="images/Staff.png" />
-            </a>
+                <img id="staff-button" alt="LUNF Staff Members"  width="69" src="images/Staff.png" /></a>
         </div>
     </div>
     

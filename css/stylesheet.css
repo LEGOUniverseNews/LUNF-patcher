@@ -7,6 +7,22 @@ body {
 /*    height:360px;*/
 }
 
+/* Remove scrollbars on the iframes */
+iframe {
+    overflow: hidden;
+    border:none;
+}
+
+#yt-video {
+    width:355px;
+    height:289px;
+}
+
+#feed {
+    width:335px;
+    height:196px;
+}
+
 /* Gradient blank background */
 #background {
     position:relative;
@@ -16,17 +32,11 @@ body {
     max-width:46.523em;
     height:305px;
 /*    box-shadow:0px 0px 5px 2px #000000;
-
-min-width:100px;
+    min-width:100px;
     max-width:745px;*/
     background:linear-gradient(#252525, #000000);
     border-radius:35px;
 }
-
-a:link {color: #2c3651;}
-a:visited {color: #1f5b8b;}
-a:hover {color: #2c3651;}
-a:active {color: #2c3651;}
 
 #faq-button {
     position:relative;
