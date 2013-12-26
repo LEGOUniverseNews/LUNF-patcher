@@ -3,6 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>LUNF Patcher</title>
+    <!-- FUTURE If we ever want to display raw text -->
+    <link href="http://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet" type="text/css">
     <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
     <!--
         LEGO Universe News! Forums Patcher
@@ -17,42 +19,39 @@
 </head>
 
 <body>
-    <!-- //TODO Remove this wrapping div or put it in CSS -->
-    <div style="background-color:transparent;text-align:left;margin-left:auto;margin-right:auto;position:relative;width:800px;height:360px;">
-        <!-- CSS background shape -->
-        <div id="background">
-        </div>
+    <!-- CSS background shape -->
+    <div id="background">
+    </div>
 
-        <!-- YouTube embed player. See js/script.js for details. -->
-        <div id="video-div">
-            <iframe id="yt-video" allowfullscreen>
-            </iframe>
-        </div>
-
-        <!-- scrolling="no" is still required because some browers STILL do not support the CSS version *sigh* -->
-        <iframe id="feed" scrolling="no" src="pages/feed.html">
+    <!-- YouTube embed player. See js/script.js for details. -->
+    <div id="video-div">
+        <iframe id="yt-video" allowfullscreen>
         </iframe>
+    </div>
 
-        <!-- LUN Logo -->
-        <img id="LUN-logo" alt="LEGO Universe News!" width="83" src="images/lun128.png" />
+    <!-- scrolling="no" is still required because some browers STILL do not support the CSS version *sigh* -->
+    <iframe id="feed" scrolling="no" src="pages/feed.html">
+    </iframe>
 
-        <!-- News Header -->
-        <img src="images/NewsHeader.png" width="346" height="29" id="News-image" alt="" />
-        <!-- <span>LEGO News from</span> -->
+    <!-- LUN Logo -->
+    <img id="lun-logo" alt="LEGO Universe News!" width="83" src="images/lun128.png" />
 
-        <div id="forum-buttons">
-            <!-- LUNF FAQ button -->
-            <a href="http://legouniversenews.forummotion.com/faq">
-                <img id="faq-button" alt="LUNF FAQ" width="69" src="images/FAQ.png" /></a>
+    <!-- News Header -->
+    <img id="news-image" alt="LEGO News" width="346" height="29" src="images/NewsHeader.png" />
+    <!-- <span>LEGO News from</span> -->
 
-            <!--  LUNF Rules button -->
-            <a href="http://legouniversenews.forummotion.com/t1-rules">
-                <img id="rules-button" alt="LUNF Rules" width="69" src="images/Rules.png" /></a>
+    <div id="forum-buttons">
+        <!-- LUNF FAQ button -->
+        <a href="http://legouniversenews.forummotion.com/faq">
+            <img id="faq-button" alt="LUNF FAQ" width="69" src="images/FAQ.png" /></a>
 
-            <!-- LUNF Staff Button -->
-            <a href="http://legouniversenews.forummotion.com/h8-staff-members">
-                <img id="staff-button" alt="LUNF Staff Members" width="69" src="images/Staff.png" /></a>
-        </div>
+        <!--  LUNF Rules button -->
+        <a href="http://legouniversenews.forummotion.com/t1-rules">
+            <img id="rules-button" alt="LUNF Rules" width="69" src="images/Rules.png" /></a>
+
+        <!-- LUNF Staff Button -->
+        <a href="http://legouniversenews.forummotion.com/h8-staff-members">
+            <img id="staff-button" alt="LUNF Staff Members" width="69" src="images/Staff.png" /></a>
     </div>
 
 <!-- Pull in jQuery and our own JavaScript -->

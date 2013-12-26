@@ -12,9 +12,6 @@
 
  /* TODO http://pxtoem.com/ */
 
-/* FUTURE If we ever want to display raw text */
-/*@import url(http://fonts.googleapis.com/css?family=Nunito:400,700);*/
-
 html { position:relative; }
 
 body {
@@ -76,12 +73,12 @@ but removing it breaks everything else
     top:91px;
 }
 
-#News-image {
+#news-image {
 /*  position:relative;
     top:-245px; */
     position:absolute;
     top:58px;
-    right:30px;
+    left:430px;
 }
 
 /* span {
@@ -96,7 +93,7 @@ but removing it breaks everything else
 } */
 
 /* LUN Logo at the top */
-#LUN-logo {
+#lun-logo {
     position:absolute;
     left:359px;
     top:0px;
