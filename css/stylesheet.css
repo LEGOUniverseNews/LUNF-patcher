@@ -10,36 +10,38 @@
     <http://opensource.org/licenses/MIT>
 */
 
- /* TODO http://pxtoem.com/ */
+ /* FUTURE http://pxtoem.com/ */
 
-html { position:relative; }
+html { position: relative; }
 
 body {
-    position:relative;
-    background-color:transparent;
-/*    text-align:center;*/
-/*    height:360px;*/
+    position: relative;
+    background-color: transparent;
+/*    text-align: center;*/
+/*    height: 360px;*/
 }
 
 /* Gradient blank background */
 #background {
-    position:relative;
-    left:25px;
-    top:46px;
-    min-width:6.25em;
-    max-width:46.523em;
-    height:305px;
-    box-shadow:0px 0px 5px 2px #9d6969;
- /*   min-width:100px;
-    max-width:745px;*/
-    background:linear-gradient(#252525, #000000);
-    border-radius:35px;
+    position: relative;
+    left: 25px;
+    top: 46px;
+    min-width: 6.25em;
+    max-width: 46.523em;
+    min-height: 19.063em;
+    max-height: 19.063em;
+    box-shadow: 0px 0px 5px 2px #9d6969;
+    background: linear-gradient(#252525, #000000);
+    -webkit-background: linear-gradient(#252525, #000000);
+    border-radius: 35px;
 }
 
 /* Remove scrollbars on the iframes */
 iframe {
     overflow: hidden;
-    border:none;
+    border: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /* The YouTube embed player is wrapped in this,
@@ -47,75 +49,75 @@ but removing it breaks everything else
 // FUTURE Remove it?
 */
 #video-div {
-    position:absolute;
-    left:40px;
-    top:50px;
+    position: absolute;
+    left: 40px;
+    top: 50px;
 }
 
 /* Size and position of YouTube embed player */
 #yt-video {
-    position:relative;
-    width:355px;
-    top:10px;
-    left:2px;
-    height:270px;
+    position: relative;
+    width: 355px;
+    top: 10px;
+    left: 2px;
+    height: 270px;
 }
 
 /* Size of RSS feed iframe from LUN */
 #feed {
-/*  position:relative;
-    bottom:215px; */
+/*  position: relative;
+    bottom: 215px; */
 
-    position:absolute;
-    width:335px;
-    height:196px;
-    left:414px;
-    top:91px;
+    position: absolute;
+    width: 335px;
+    height: 196px;
+    left: 414px;
+    top: 91px;
 }
 
 #news-image {
-/*  position:relative;
-    top:-245px; */
-    position:absolute;
-    top:58px;
-    left:430px;
+/*  position: relative;
+    top: -245px; */
+    position: absolute;
+    top: 58px;
+    left: 430px;
 }
 
 /* span {
-    position:relative;
-    top:-248px;
-    right:-454px;
+    position: relative;
+    top: -248px;
+    right: -454px;
     /* Nunito font */
     /* font-family: 'Nunito', sans-serif;
     font-weight: 700;
-    color:gray;
-    font-size:21px;
+    color: gray;
+    font-size: 21px;
 } */
 
 /* LUN Logo at the top */
 #lun-logo {
-    position:absolute;
-    left:359px;
-    top:0px;
+    position: absolute;
+    left: 359px;
+    top: 0px;
 }
 
 /* LUNF FAQ link */
 #faq-button {
-    position:relative;
-    top:-24px;
-    left:412px;
+    position: relative;
+    top: -24px;
+    left: 412px;
 }
 
 /* LUNF Rules link */
 #rules-button {
-    position:relative;
-    top:-24px;
-    left:468px;
+    position: relative;
+    top: -24px;
+    left: 468px;
 }
 
 /* LUNF Staff Members page link */
 #staff-button {
-    position:relative;
-    top:-24px;
-    left:524px;
+    position: relative;
+    top: -24px;
+    left: 524px;
 }
