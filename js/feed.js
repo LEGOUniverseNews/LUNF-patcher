@@ -15,14 +15,15 @@
 google.load("feeds", "1");
 
 function OnLoad() {
-  // Create a feed control
-  var feedControl = new google.feeds.FeedControl();
+    "use strict";
+    // Create a feed control
+    var feedControl = new google.feeds.FeedControl();
 
-  // Load the LUN feed
-  feedControl.addFeed("http://legouniversenews.wordpress.com/feed/", "LEGO Universe News!");
+    // Load the LUN feed
+    feedControl.addFeed("http://legouniversenews.wordpress.com/feed/", "LEGO Universe News!");
 
-  // Display the feed
-  feedControl.draw(document.getElementById("news-feed"));
+    // Display the feed
+    feedControl.draw(document.getElementById("news-feed"));
 }
 
 google.setOnLoadCallback(OnLoad);

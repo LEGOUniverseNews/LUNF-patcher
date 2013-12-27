@@ -4,12 +4,13 @@
     Created 2013-2014 Triangle717 & rioforce
     <http://Triangle717.WordPress.com/>
     <http://rioforce.WordPress.com/>
-    
+
     Licensed under The MIT License
     <http://opensource.org/licenses/MIT>
 */
 
 $(document).ready(function() {
+    "use strict";
     /* YouTube embed player of current LEGO-related video
     preferably from the LEGO channel (http://www.youtube.com/user/LEGO
     */
