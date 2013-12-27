@@ -1,4 +1,3 @@
-/* jshint -W032 */
 /*
     LEGO Universe News! Forums Patcher
 

@@ -27,8 +27,12 @@
     </div>
 
     <!-- scrolling="no" is still required because some browers STILL do not support the CSS version *sigh* -->
-    <iframe id="feed" scrolling="no" src="pages/feed.html">
-    </iframe>
+<!--    <iframe id="feed" scrolling="no" src="pages/feed.html">-->
+<!--    </iframe>-->
+    
+    <!-- LUN news feed , taken from 
+    http://code.google.com/apis/ajax/playground/#feed_control -->
+    <div id="news-feed">Loading News...</div>
 
     <!-- LUN Logo -->
     <img id="lun-logo" alt="LEGO Universe News!" width="83" src="images/lun.png" />
@@ -52,10 +56,16 @@
     </div>
 
     <!-- Pull in the Nunito font and our own CSS -->
-    <link href="http://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet" type="text/css">
     <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="css/feed.css" rel="stylesheet" type="text/css">
+    
     <!-- Pull in jQuery and our own JavaScript -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://www.google.com/jsapi"></script>
+    <script src="js/script.js" charset="UTF-8"></script>
+    <!-- Pull in the LUN news feed -->
+    <!-- //TODO Set link targets to _blank, rather than _self  -->
+    <script src="js/feed.js" charset="UTF-8"></script>
 </body>
 </html>

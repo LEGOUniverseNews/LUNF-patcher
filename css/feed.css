@@ -1,16 +1,33 @@
-/* Nunito font */
-@import url('http://fonts.googleapis.com/css?family=Nunito:700');
+@charset "UTF-8";
+/*
+    LEGO Universe News! Forums Patcher
 
-a {
-color: #c6c6c6;
+    Created 2013-2014 Triangle717 & rioforce
+    <http://Triangle717.WordPress.com/>
+    <http://rioforce.WordPress.com/>
+
+    Licensed under The MIT License
+    <http://opensource.org/licenses/MIT>
+*/
+
+/* Resize header font */
+a.gf-title {
+    font-family: "Arial Rounded MT Bold", "Nunito", sans-serif;
+    font-size: 0.8em;
+    color: #C6C6C6;
 }
 
-/* html {
-background-color: black;
-} */
-
-#container {
-color: #FFFFFF;
-font-family: 'Nunito';
-font-size: 12px;
+/* Resize summary font */
+    .gf-snippet{
+    font-family: "Arial Rounded MT Bold", "Nunito", sans-serif;
+    font-size: 0.7em;
+    color: white;
 }
+
+
+/* Hide unwanted elements */
+.gfc-resultsHeader, .gfc-resultsHeader, .gf-spacer, .gf-author, .gf-relativePublishedDate {
+display: none !important;
+}
+
+a.gf-title:hover { text-decoration: underline; }

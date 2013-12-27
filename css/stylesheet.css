@@ -65,7 +65,7 @@ but removing it breaks everything else
 }
 
 /* Size of RSS feed iframe from LUN */
-#feed {
+#news-feed {
 /*  position: relative;
     bottom: 215px; */
 
@@ -74,6 +74,9 @@ but removing it breaks everything else
     height: 196px;
     left: 414px;
     top: 91px;
+    color: #e6dede;
+    /* TODO Use perfect-scrollbar */
+    overflow-x:hidden;
 }
 
 #news-image {
