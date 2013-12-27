@@ -17,17 +17,17 @@ a.gf-title {
     color: #C6C6C6;
 }
 
+/* Underline headers when hovered over to denote links */
+a.gf-title:hover { text-decoration: underline; }
+
 /* Resize summary font */
-    .gf-snippet{
+.gf-snippet{
     font-family: "Arial Rounded MT Bold", "Nunito", sans-serif;
     font-size: 0.7em;
     color: white;
 }
 
-
 /* Hide unwanted elements */
 .gfc-resultsHeader, .gfc-resultsHeader, .gf-spacer, .gf-author, .gf-relativePublishedDate {
-display: none !important;
+    display: none !important;
 }
-
-a.gf-title:hover { text-decoration: underline; }

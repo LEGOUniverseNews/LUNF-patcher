@@ -35,7 +35,8 @@
     <div id="news-feed">Loading News...</div>
 
     <!-- LUN Logo -->
-    <img id="lun-logo" alt="LEGO Universe News!" width="83" src="images/lun.png" />
+    <a href="http://legouniversenews.wordpress.com/">
+             <img id="lun-logo" alt="LEGO Universe News!" width="83" src="images/lun.png" /></a>
 
     <!-- News Header -->
     <img id="news-image" alt="LEGO News" width="346" height="29" src="images/NewsHeader.png" />
@@ -43,16 +44,16 @@
 
     <div id="forum-buttons">
         <!-- LUNF FAQ button -->
-        <a href="http://legouniversenews.forummotion.com/faq/">
+        <a href="http://legouniversenews.forummotion.com/faq">
             <div class="font" id="faq-text">FAQ</div></a>
 
         <!--  LUNF Rules button -->
-        <a href="http://legouniversenews.forummotion.com/t1-rules/">
+        <a href="http://legouniversenews.forummotion.com/t1-rules">
             <div class="font" id="rules-text">Rules</div></a>
 
         <!-- LUNF Staff Button -->
         <a href="http://legouniversenews.forummotion.com/h8-staff-members/">
-        <div class="font" id="staff-text">Staff</div></a>
+             <div class="font" id="staff-text">Staff</div></a>
     </div>
 
     <!-- Pull in the Nunito font and our own CSS -->
@@ -62,10 +63,14 @@
     
     <!-- Pull in jQuery and our own JavaScript -->
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<!--    <script src="js/jquery-1.10.2.min.js"></script>-->
     <script src="http://www.google.com/jsapi"></script>
     <script src="js/script.js" charset="UTF-8"></script>
     <!-- Pull in the LUN news feed -->
     <!-- //TODO Set link targets to _blank, rather than _self  -->
     <script src="js/feed.js" charset="UTF-8"></script>
+    
+    <!-- Open all links in new tabs -->
+    <script>$("a").attr("target", "_blank");</script>
 </body>
 </html>

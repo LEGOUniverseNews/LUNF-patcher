@@ -13,6 +13,7 @@
  /* FUTURE http://pxtoem.com/ */
 html { position: relative; }
 
+/* Hide all default link decoration */
 a { text-decoration: none; }
 
 body {
@@ -27,8 +28,9 @@ body {
     position: relative;
     left: 25px;
     top: 46px;
-    min-width: 6.25em;
+/*    min-width: 6.25em;*/
     max-width: 46.523em;
+    min-width: 46.523em;
     min-height: 19.063em;
     max-height: 19.063em;
     box-shadow: 0px 0px 5px 2px #9d6969;
@@ -76,7 +78,11 @@ but removing it breaks everything else
     top: 91px;
     color: #e6dede;
     /* TODO Use perfect-scrollbar */
-    overflow-x:hidden;
+    overflow-x: hidden;
+/*
+    scrollbar-x: bottom;
+    scrollbar-y: right;
+*/
 }
 
 #news-image {
@@ -111,8 +117,8 @@ but removing it breaks everything else
     font-weight: 500;
     font-size: 21px;
     color: #e6dede;
-    width: 69px;
-    height: 69px;
+    width:1px;
+    height:0px;
 }
 
 /* LUNF FAQ link */
@@ -123,12 +129,29 @@ but removing it breaks everything else
 
 /* LUNF Rules link */
 #rules-text {
-    bottom: 71px;
+    bottom: 2px;
     left: 540px;
 }
 
 /* LUNF Staff Members page link */
 #staff-text {
-    bottom: 140px;
+    bottom: 2px;
     left: 680px;
 }
+
+/* Customize perfect-scrollbar */
+/*
+.ps-scrollbar-y {
+    background-color: #B3B3B3 !important;
+    width: 9px !important;
+}
+*/
+
+/* Hide the scrollbar rail */
+/*
+.ps-scrollbar-y-rail {
+    background-color: rgba(000, 000, 000, 000) !important;
+    top: 75px !important;
+    right :-2px !important;
+}
+*/

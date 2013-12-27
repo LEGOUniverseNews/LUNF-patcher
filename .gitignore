@@ -1,6 +1,7 @@
 *.tmp
 *.bak
 images/backup/*
+js/jquery-*
 
 #############
 ## Windows

@@ -9,10 +9,8 @@
     <http://opensource.org/licenses/MIT>
 */
 
-//$(document).ready(function() {
-    // Open all links in new tabs
-    $("a").attr("target", "_blank");
-//});
+//// Open all links in new tabs
+//$("a").attr("target", "_blank");
 
 google.load("feeds", "1");
 
@@ -28,3 +26,12 @@ function OnLoad() {
 }
 
 google.setOnLoadCallback(OnLoad);
+
+//$(document).ready(function() {
+//    // Activate scroll bar
+//    $content.perfectScrollbar({
+//        wheelSpeed: 30,
+//        suppressScrollX: true,
+//        wheelPropagation: true
+//    });
+//});
