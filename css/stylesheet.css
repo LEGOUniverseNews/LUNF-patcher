@@ -11,7 +11,6 @@
 */
 
  /* FUTURE http://pxtoem.com/ */
-
 html { position: relative; }
 
 a { text-decoration: none; }
@@ -103,16 +102,9 @@ but removing it breaks everything else
     top: 0px;
 }
 
-/* LUNF FAQ link */
-#faq-button {
-    position: relative;
-    top: -24px;
-    left: 412px;
-}
-
 .font {
     position: relative;
-    font-family: "Nunito", sans-serif;
+    font-family: "Arial Rounded MT Bold", "Nunito", sans-serif;
     font-weight: 500;
     font-size: 21px;
     color: #e6dede;
@@ -120,33 +112,46 @@ but removing it breaks everything else
     height: 69px;
 }
 
-#faq-text {
-/*    top: -24px;*/
-    bottom:px;
-    left: 412px;
-}
-
-#rules-text {
-/*    top: -10px;*/
-    bottom:70px;
-    left: 550px;
-}
-
-#staff-text {
+/* LUNF FAQ link */
+/*
+#faq-button {
+    position: relative;
     top: -24px;
     left: 412px;
 }
+*/
+
+#faq-text {
+    bottom:2px;
+    left: 425px;
+}
 
 /* LUNF Rules link */
+/*
 #rules-button {
     position: relative;
     top: -24px;
     left: 468px;
 }
+*/
+
+#rules-text {
+/*    top: -10px;*/
+    bottom:71px;
+    left: 540px;
+}
 
 /* LUNF Staff Members page link */
+/*
 #staff-button {
     position: relative;
     top: -24px;
     left: 524px;
+}
+*/
+
+#staff-text {
+/*    top: -24px;*/
+    bottom:140px;
+    left: 680px;
 }
