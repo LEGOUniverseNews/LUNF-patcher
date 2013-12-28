@@ -13,9 +13,6 @@
  /* FUTURE http://pxtoem.com/ */
 html { position: relative; }
 
-/* Hide all default link decoration */
-a { text-decoration: none; }
-
 body {
     position: relative;
     background-color: transparent;
