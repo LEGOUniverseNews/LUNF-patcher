@@ -68,9 +68,6 @@ but removing it breaks everything else
 
 /* Size of RSS feed iframe from LUN */
 #news-feed {
-/*  position: relative;
-    bottom: 215px; */
-
     position: absolute;
     width: 335px;
     height: 196px;
@@ -78,11 +75,11 @@ but removing it breaks everything else
     top: 91px;
     color: #e6dede;
     /* TODO Use perfect-scrollbar */
+    overflow:scroll;
     overflow-x: hidden;
-/*
+    overflow-y: hidden;
     scrollbar-x: bottom;
     scrollbar-y: right;
-*/
 }
 
 #news-image {
@@ -140,12 +137,11 @@ but removing it breaks everything else
 }
 
 /* Customize perfect-scrollbar */
-/*
 .ps-scrollbar-y {
-    background-color: #B3B3B3 !important;
+/*    background-color: #B3B3B3 !important;*/
+    background-color: blue !important;
     width: 9px !important;
 }
-*/
 
 /* Hide the scrollbar rail */
 /*
