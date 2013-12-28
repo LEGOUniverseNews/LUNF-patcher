@@ -13,6 +13,9 @@
  /* FUTURE http://pxtoem.com/ */
 html { position: relative; }
 
+/* Hide all default link decoration */
+a { text-decoration: none; }
+
 body {
     position: relative;
     background-color: transparent;
@@ -44,15 +47,7 @@ body {
     border-radius: 35px;
 }
 
-/* Remove scrollbars on the iframes */
-iframe {
-    overflow: hidden;
-    border: none;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-/* TODO Comment me */
+/* Container for the player */
 #video-div {
     position: absolute;
     left: 40px;
@@ -78,11 +73,12 @@ iframe {
     top: 91px;
     color: #e6dede;
     /* TODO Use perfect-scrollbar */
-    overflow:scroll;
     overflow-x: hidden;
+/*
     overflow-y: hidden;
     scrollbar-x: bottom;
     scrollbar-y: right;
+*/
 }
 
 #news-image {
@@ -92,17 +88,6 @@ iframe {
     top: 58px;
     left: 430px;
 }
-
-/* span {
-    position: relative;
-    top: -248px;
-    right: -454px;
-    /* Nunito font */
-    /* font-family: 'Nunito', sans-serif;
-    font-weight: 700;
-    color: gray;
-    font-size: 21px;
-} */
 
 /* General settings for all text */
 .font {
@@ -155,11 +140,12 @@ iframe {
 }
 
 /* Customize perfect-scrollbar */
+/*
 .ps-scrollbar-y {
-/*    background-color: #B3B3B3 !important;*/
-    background-color: blue !important;
+    background-color: #B3B3B3 !important;
     width: 9px !important;
 }
+*/
 
 /* Hide the scrollbar rail */
 /*

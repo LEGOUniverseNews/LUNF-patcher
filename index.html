@@ -15,8 +15,8 @@
     -->
 
     <style>
-        /* Hide all default link decoration */
-        a { text-decoration: none; }
+        /* Remove border around the YouTube player */
+        iframe { border: none; }
         /* Resize header font */
         a.gf-title { font-family: "Arial Rounded MT Bold", "Nunito", sans-serif; font-size: 0.8em; color: #C6C6C6; }
         /* Underline headers when hovered over to denote links */
@@ -27,8 +27,6 @@
         .gfc-resultsHeader, .gfc-resultsHeader, .gf-spacer, .gf-author, .gf-relativePublishedDate { display: none !important; }
     </style>
 
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<!--    <script src="js/jquery-1.10.2.min.js"></script>-->
     <!-- Pull in the Nunito font and our own CSS -->
     <link href="http://fonts.googleapis.com/css?family=Nunito:400" rel="stylesheet" type="text/css">
     <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
@@ -46,11 +44,7 @@
         <img id="lun-video-error" alt="LEGO Universe News!" width="83" src="images/lun.png" />
         <p class="font" id="video-error">This video is not available<br>on your device.</p>
     </div>
-
-    <!-- scrolling="no" is still required because some browers STILL do not support the CSS version *sigh* -->
-<!--    <iframe id="feed" scrolling="no" src="pages/feed.html">-->
-<!--    </iframe>-->
-
+    
     <!-- LUN news feed, taken from
     http://code.google.com/apis/ajax/playground/#feed_control -->
     <div id="news-feed">Loading News...</div>
@@ -80,14 +74,18 @@
 
 
     <!-- Pull in jQuery and our own JavaScript -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!--    <script src="js/jquery-1.10.2.min.js"></script>-->
     <script src="http://www.google.com/jsapi"></script>
     <script src="js/script.js"></script>
     <!-- Pull in the LUN news feed -->
     <!-- //TODO Set link targets to _blank, rather than _self  -->
     <script src="js/feed.js"></script>
 
+<!--
     <script src="js/jquery.mousewheel.js"></script>
     <script src="js/perfect-scrollbar-0.4.6.with-mousewheel.min.js"></script>
+-->
 </body>
 </html>
-<noscript><link href="css/perfect-scrollbar-0.4.6.min.css" rel="stylesheet" type="text/css"></noscript>
+<!--<noscript><link href="css/perfect-scrollbar-0.4.6.min.css" rel="stylesheet" type="text/css"></noscript>-->
