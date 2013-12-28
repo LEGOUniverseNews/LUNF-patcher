@@ -11,12 +11,15 @@
 
 $(document).ready(function() {
     "use strict";
+    // Open all links in new tabs
+    $("a").attr("target", "_blank");
+
     /* YouTube embed player of current LEGO-related video
     preferably from the LEGO channel (http://www.youtube.com/user/LEGO
     */
 
     /* FUTURE When updating the YouTube video, always get the code directly after
-    "watch?v=". For example, if you wanted to embed "/http://www.youtube.com/watch?v=g8-4wXkT60c",
+    "watch?v=". For example, if you wanted to embed "http://www.youtube.com/watch?v=g8-4wXkT60c",
     you would take "g8-4wXkT60c" and place it after "embed/".
     Thus the new link would like "http://www.youtube.com/embed/g8-4wXkT60c"
     */

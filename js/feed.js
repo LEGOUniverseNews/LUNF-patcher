@@ -9,9 +9,6 @@
     <http://opensource.org/licenses/MIT>
 */
 
-//// Open all links in new tabs
-//$("a").attr("target", "_blank");
-
 google.load("feeds", "1");
 
 function OnLoad() {
@@ -30,7 +27,7 @@ google.setOnLoadCallback(OnLoad);
 
 //$(document).ready(function() {
 //    // Activate scroll bar
-//    $content.perfectScrollbar({
+//    $(#news-feed").perfectScrollbar({
 //        wheelSpeed: 30,
 //        suppressScrollX: true,
 //        wheelPropagation: true
