@@ -26,11 +26,25 @@
         /* Hide unwanted elements */
         .gfc-resultsHeader, .gfc-resultsHeader, .gf-spacer, .gf-author, .gf-relativePublishedDate { display: none !important; }
     </style>
-
+    
     <!-- Pull in the Nunito font and our own CSS -->
     <link href="http://fonts.googleapis.com/css?family=Nunito:400" rel="stylesheet" type="text/css">
     <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
-<!--    <link href="css/feed.css" rel="stylesheet" type="text/css">-->
+    <!-- <link href="css/feed.css" rel="stylesheet" type="text/css">-->
+    
+    <!-- Pull in jQuery and our own JavaScript -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!--    <script src="js/jquery-1.10.2.min.js"></script>-->
+    <script src="http://www.google.com/jsapi"></script>
+    <script src="js/script.js"></script>
+    <!-- Pull in the LUN news feed -->
+    <!-- //TODO Set link targets to _blank, rather than _self  -->
+    <script src="js/feed.js"></script>
+
+<!--
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/perfect-scrollbar-0.4.6.with-mousewheel.min.js"></script>
+-->
 </head>
 
 <body>
@@ -70,22 +84,6 @@
         <a href="http://legouniversenews.forummotion.com/h8-staff-members/">
              <div class="font" id="staff-text">Staff</div></a>
     </div>
-
-
-
-    <!-- Pull in jQuery and our own JavaScript -->
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <!--    <script src="js/jquery-1.10.2.min.js"></script>-->
-    <script src="http://www.google.com/jsapi"></script>
-    <script src="js/script.js"></script>
-    <!-- Pull in the LUN news feed -->
-    <!-- //TODO Set link targets to _blank, rather than _self  -->
-    <script src="js/feed.js"></script>
-
-<!--
-    <script src="js/jquery.mousewheel.js"></script>
-    <script src="js/perfect-scrollbar-0.4.6.with-mousewheel.min.js"></script>
--->
 </body>
 </html>
 <!--<noscript><link href="css/perfect-scrollbar-0.4.6.min.css" rel="stylesheet" type="text/css"></noscript>-->
