@@ -25,11 +25,11 @@ function OnLoad() {
 
 google.setOnLoadCallback(OnLoad);
 
-//$(document).ready(function() {
-//    // Activate scroll bar
-//    $("#news-feed").perfectScrollbar({
-//        wheelSpeed: 30,
-//        suppressScrollX: true,
-//        wheelPropagation: true
-//    });
-//});
+/*$(document).ready(function() {
+    // Activate scroll bar
+    $("#news-feed").perfectScrollbar({
+        wheelSpeed: 30,
+        suppressScrollX: true,
+        wheelPropagation: true
+    });
+}); */
