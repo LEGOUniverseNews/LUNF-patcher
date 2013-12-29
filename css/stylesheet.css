@@ -17,12 +17,12 @@ html { position: relative; }
 /* Hide all default link decoration */
 /*a { text-decoration: none; }*/
 
-body {
+/* body {
     position: relative;
-    background-color: transparent;
+    background-color: transparent; */
 /*    text-align: center;*/
-/*    height: 360px;*/
-}
+/*    height: 360px;
+} */
 
 /* LUN Logo at the top */
 #lun-logo {

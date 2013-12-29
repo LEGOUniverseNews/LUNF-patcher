@@ -16,6 +16,7 @@
 
     <style>
         html { position: relative; }
+        body { position: relative; background-color: transparent; /*text-align: center;*/ /*height: 360px;*/ }
         /* Hide all default link decoration */
         a { text-decoration: none; }
         /* Remove border around the YouTube player */
@@ -27,11 +28,6 @@
     <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
     <!--<link href="css/perfect-scrollbar-0.4.6.min.css" rel="stylesheet" type="text/css">-->
 
-    <!-- Pull in the LUN news feed -->
-    <script src="http://www.google.com/jsapi"></script>
-    <!-- //TODO Set link targets to _blank, rather than _self  -->
-    <script src="js/feed.js"></script>
-
 <!--
     <script src="js/jquery.mousewheel.js"></script>
     <script src="js/perfect-scrollbar-0.4.6.with-mousewheel.min.js"></script>
@@ -42,18 +38,6 @@
     <!-- CSS background shape -->
     <div id="background">
     </div>
-
-    <!-- YouTube embed player. See js/script.js for details. -->
-    <!--
-    <div id="video-div">
-        <iframe id="yt-video" allowfullscreen></iframe>
-        <img id="lun-video-error" alt="LEGO Universe News!" width="83" src="images/lun.png" />
-        <p class="font" id="video-error">This video is not available<br>on your device.</p>
-    </div> -->
-
-    <!-- LUN news feed, taken from
-    http://code.google.com/apis/ajax/playground/#feed_control -->
-    <div id="news-feed">Loading News...</div>
 
     <!-- LUN Logo -->
     <a href="http://legouniversenews.wordpress.com/">
@@ -78,7 +62,7 @@
     </div>
 
     <!-- Pull in jQuery and our JS now that we need it -->
-<!--    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+    <script src="http://www.google.com/jsapi"></script>
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/script.js"></script>
 
@@ -88,6 +72,10 @@
         <img id="lun-video-error" alt="LEGO Universe News!" width="83" src="images/lun.png" />
         <p class="font" id="video-error">This video is not available<br>on your device.</p>
     </div>
+
+    <!-- LUN news feed, taken from
+    http://code.google.com/apis/ajax/playground/#feed_control -->
+    <div id="news-feed">Loading News...</div>
 
 </body>
 </html>
