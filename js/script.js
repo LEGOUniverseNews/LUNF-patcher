@@ -1,5 +1,5 @@
 /*
-    LEGO Universe News! Forums Patcher
+    LEGO Universe News! Patcher
 
     Created 2013-2014 Triangle717 & rioforce
     <http://Triangle717.WordPress.com/>
