@@ -156,3 +156,28 @@ body {
     right :-2px !important;
 }
 */
+
+/* -------- RSS Feed Styling -------- */
+
+/* Resize header font */
+a.gf-title {
+    font-family: "Arial Rounded MT Bold", "Nunito", sans-serif;
+    font-size: 0.8em;
+    color: #C6C6C6;
+}
+
+/* Underline headers when hovered over to denote links */
+a.gf-title:hover { text-decoration: underline; }
+
+/* Resize summary font */
+.gf-snippet{
+    font-family: "Arial Rounded MT Bold", "Nunito", sans-serif;
+    font-size: 0.7em;
+    color: white;
+}
+
+/* Hide unwanted elements */
+.gfc-resultsHeader, .gfc-resultsHeader, .gf-spacer, .gf-author, .gf-relativePublishedDate {
+    display: none !important;
+}
+
