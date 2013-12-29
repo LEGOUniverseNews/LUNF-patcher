@@ -87,12 +87,6 @@
     color: #e6dede;
 }
 
-/* Align the main text buttons correctly */
-.text-buttons {
-    width: 1px;
-    height: 0px;
-}
-
 /* Error message in case the video is not available */
 #video-error {
     position: absolute;
