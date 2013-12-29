@@ -57,9 +57,9 @@
 #news-feed {
     position: absolute;
     width: 335px;
-    height: 196px;
+    height: 205px;
     left: 414px;
-    top: 91px;
+    top: 90px;
     color: #e6dede;
     /* TODO Use perfect-scrollbar */
     overflow-x: hidden;
@@ -148,24 +148,34 @@
 /* -------- RSS Feed Styling -------- */
 
 /* Resize header font */
-a.gf-title {
+.itemTitle {
+    position: relative;
+    top: 6px;
+}
+
+/* Align the list */
+.feedEkList li {
+    position: relative;
+    list-style: none;
+    top: -21px;
+}
+
+/* Use our favorite fonts */
+.itemTitle a, .itemContent {
     font-family: "Arial Rounded MT Bold", "Nunito", sans-serif;
-    font-size: 0.8em;
+}
+
+/* Change the size and color of header */
+.itemTitle a {
+    font-size: 0.9em;
     color: #C6C6C6;
 }
 
-/* Underline headers when hovered over to denote links */
-a.gf-title:hover { text-decoration: underline; }
+/* Display underline on hover to denote a link */
+.itemTitle a:hover{ text-decoration:underline; }
 
-/* Resize summary font */
-.gf-snippet{
-    font-family: "Arial Rounded MT Bold", "Nunito", sans-serif;
+/* Change the size and color of the paragraph */
+.itemContent {
     font-size: 0.7em;
     color: white;
 }
-
-/* Hide unwanted elements */
-.gfc-resultsHeader, .gfc-resultsHeader, .gf-spacer, .gf-author, .gf-relativePublishedDate {
-    display: none !important;
-}
-

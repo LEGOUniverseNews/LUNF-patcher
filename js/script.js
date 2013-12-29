@@ -13,6 +13,16 @@ $(document).ready(function() {
     // Open all links in new tabs
     $("a").attr("target", "_blank");
 
+    /* RSS feed from LUN using the FeedEk jQuery plugin */
+    $('#news-feed').FeedEk({
+        FeedUrl: "http://legouniversenews.wordpress.com/feed/",
+        MaxCount: 3,
+        ShowDesc: true,
+        ShowPubDate: false,
+        DescCharacterLimit :165,
+        TitleLinkTarget: "_blank"
+    });
+
     /* YouTube embed player of current LEGO-related video
     preferably from the LEGO channel (http://www.youtube.com/user/LEGO
     */
@@ -32,22 +42,6 @@ $(document).ready(function() {
     $("#yt-video").attr("src", ytVideo + ytVideoParams);
 });
 
-
-google.load("feeds", "1");
-
-function OnLoad() {
-    // Create a feed control
-    var feedControl = new google.feeds.FeedControl();
-
-    // Load the LUN feed
-    feedControl.addFeed("http://legouniversenews.wordpress.com/feed/", "LEGO Universe News!");
-
-    // Display the feed
-    feedControl.draw(document.getElementById("news-feed"));
-}
-
-google.setOnLoadCallback(OnLoad);
-
 /*$(document).ready(function() {
     // Activate scroll bar
     $("#news-feed").perfectScrollbar({
@@ -56,9 +50,3 @@ google.setOnLoadCallback(OnLoad);
         wheelPropagation: true
     });
 }); */
-
-
-$(document).ready(function() {
-    // Open all links in new tabs
-    $("a").attr("target", "_blank");
-});
