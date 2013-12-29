@@ -11,18 +11,6 @@
 */
 
  /* FUTURE http://pxtoem.com/ */
-/*
-html { position: relative; }
-*/
-/* Hide all default link decoration */
-/*a { text-decoration: none; }*/
-
-/* body {
-    position: relative;
-    background-color: transparent; */
-/*    text-align: center;*/
-/*    height: 360px;
-} */
 
 /* LUN Logo at the top */
 #lun-logo {
@@ -99,6 +87,12 @@ html { position: relative; }
     color: #e6dede;
 }
 
+/* Align the main text buttons correctly */
+.text-buttons {
+    width: 1px;
+    height: 0px;
+}
+
 /* Error message in case the video is not available */
 #video-error {
     position: absolute;
@@ -120,24 +114,18 @@ html { position: relative; }
 #faq-text {
     bottom: 2px;
     left: 425px;
-    width: 1px;
-    height: 0px;
 }
 
 /* LUNF Rules link */
 #rules-text {
     bottom: 2px;
     left: 540px;
-    width: 1px;
-    height: 0px;
 }
 
 /* LUNF Staff Members page link */
 #staff-text {
     bottom: 2px;
     left: 680px;
-    width: 1px;
-    height: 0px;
 }
 
 /* Customize perfect-scrollbar */
