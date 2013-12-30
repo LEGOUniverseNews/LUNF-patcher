@@ -17,7 +17,7 @@
 
     <style>
         html { position: relative; }
-        body { position: relative; background-color: transparent; /*text-align: center;*/ /*height: 360px;*/ }
+        body { position: relative; background-color: transparent; }
         /* Hide all default link decoration */
         a { text-decoration: none; }
         /* Remove border around the YouTube player */
@@ -25,17 +25,16 @@
         /* Gradient blank background */
         #background {
             position: relative;
-            left: 25px;
-            top: 46px;
-        /*    min-width: 6.25em;*/
+            left: 1.563em;
+            top: 2.875em;
+            min-width: 31.250em;
             max-width: 46.523em;
-            min-width: 46.523em;
             min-height: 19.063em;
             max-height: 19.063em;
             box-shadow: 0px 0px 5px 2px #9d6969;
             background: linear-gradient(#252525, #000000);
             background: -webkit-linear-gradient(#252525, #000000);
-            border-radius: 35px;
+            border-radius: 2.188em;
         }
     </style>
 
@@ -52,10 +51,9 @@
 
 <body>
     <!-- CSS background shape -->
-    <div id="background">
-    </div>
-    
-        <!-- YouTube embed player. See js/script.js for details. -->
+    <div id="background"></div>
+
+    <!-- YouTube embed player. See js/script.js for details. -->
     <div id="video-div">
         <iframe id="yt-video" scrolling="no" allowfullscreen></iframe>
         <img id="lun-video-error" alt="LEGO Universe News!" width="83" src="images/lun.png" />
@@ -96,8 +94,9 @@
     <script src="js/perfect-scrollbar-0.4.6.with-mousewheel.min.js"></script>
 -->
     <script src="js/FeedEk.js"></script>
-    
-    <script>
+    <script src="js/feed.js"></script>
+
+    <!-- <script>
         /* RSS feed from LUN using the FeedEk jQuery plugin */
         $('#news-feed').FeedEk({
             FeedUrl: "http://legouniversenews.wordpress.com/feed/",
@@ -107,7 +106,7 @@
             DescCharacterLimit :155,
             TitleLinkTarget: "_blank"
         });
-        </script>
+    </script> -->
 <!--    <script src="js/script.js"></script>-->
 
     <script type="text/javascript">
