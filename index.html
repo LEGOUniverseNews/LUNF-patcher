@@ -27,7 +27,8 @@
             position: relative;
             left: 1.563em;
             top: 2.875em;
-            min-width: 31.250em;
+/*            min-width: 31.250em;*/
+            min-width: 46.523em;
             max-width: 46.523em;
             min-height: 19.063em;
             max-height: 19.063em;
@@ -87,17 +88,20 @@
     </div>
 
 
-    <!-- Pull in jQuery and our JS now that we need it -->
+    <!-- Pull in jQuery now that we need it -->
 <!--    <script src="js/jquery-1.10.2.min.js"></script>-->
     <script src="js/jquery-2.0.3.min.js"></script>
 <!--
     <script src="js/jquery.mousewheel.js"></script>
     <script src="js/perfect-scrollbar-0.4.6.with-mousewheel.min.js"></script>
 -->
+    <!-- Load the FeedEk library and our settings asynchronously
+        http://css-tricks.com/thinking-async/ -->
     <script async src="js/FeedEk.js"></script>
     <script async src="js/feed.js"></script>
 <!--    <script src="js/script.js"></script>-->
-
+    
+    <!-- Delay the loading of the video player until the very end -->
     <script>
         function downloadJSAtOnload() {
             var element = document.createElement("script");
