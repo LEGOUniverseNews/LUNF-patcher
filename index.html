@@ -95,7 +95,33 @@
     <script src="js/perfect-scrollbar-0.4.6.with-mousewheel.min.js"></script>
 -->
     <script src="js/FeedEk.js"></script>
-    <script src="js/script.js"></script>
+    
+    <script>
+        /* RSS feed from LUN using the FeedEk jQuery plugin */
+        $('#news-feed').FeedEk({
+            FeedUrl: "http://legouniversenews.wordpress.com/feed/",
+            MaxCount: 3,
+            ShowDesc: true,
+            ShowPubDate: false,
+            DescCharacterLimit :155,
+            TitleLinkTarget: "_blank"
+        });
+        </script>
+<!--    <script src="js/script.js"></script>-->
 
+    <script type="text/javascript">
+        function downloadJSAtOnload() {
+            var element = document.createElement("script");
+            element.src = "js/script.js";
+            document.body.appendChild(element);
+        }
+        if (window.addEventListener) {
+            window.addEventListener("load", downloadJSAtOnload, false);
+        } else if (window.attachEvent) {
+            window.attachEvent("onload", downloadJSAtOnload);
+        } else {
+            window.onload = downloadJSAtOnload;
+        }
+    </script>
 </body>
 </html>
