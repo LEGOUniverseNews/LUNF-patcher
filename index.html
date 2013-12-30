@@ -98,14 +98,14 @@
     <!-- Load the FeedEk library and our settings asynchronously
         http://css-tricks.com/thinking-async/ -->
     <script async src="js/FeedEk.js"></script>
-    <script async src="js/feed.js"></script>
+    <script async src="js/script.js"></script>
 <!--    <script src="js/script.js"></script>-->
     
     <!-- Delay the loading of the video player until the very end -->
     <script>
         function downloadJSAtOnload() {
             var element = document.createElement("script");
-            element.src = "js/script.js";
+            element.src = "js/feed.js";
             document.body.appendChild(element);
         }
         if (window.addEventListener) {
