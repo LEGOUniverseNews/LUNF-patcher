@@ -21,12 +21,27 @@
         a { text-decoration: none; }
         /* Remove border around the YouTube player */
         iframe { border: none; }
+        /* Gradient blank background */
+        #background {
+            position: relative;
+            left: 25px;
+            top: 46px;
+        /*    min-width: 6.25em;*/
+            max-width: 46.523em;
+            min-width: 46.523em;
+            min-height: 19.063em;
+            max-height: 19.063em;
+            box-shadow: 0px 0px 5px 2px #9d6969;
+            background: linear-gradient(#252525, #000000);
+            background: -webkit-linear-gradient(#252525, #000000);
+            border-radius: 35px;
+        }
     </style>
 
     <!-- Pull in the Nunito font and our own CSS -->
     <link href="http://fonts.googleapis.com/css?family=Nunito:400" rel="stylesheet" type="text/css">
     <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
-    <!--<link href="css/perfect-scrollbar-0.4.6.min.css" rel="stylesheet" type="text/css">-->
+    <link href="css/perfect-scrollbar-0.4.6.min.css" rel="stylesheet" type="text/css">
 
 <!--
     <script src="js/jquery.mousewheel.js"></script>
@@ -63,12 +78,14 @@
 
     <!-- Pull in jQuery and our JS now that we need it -->
     <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/perfect-scrollbar-0.4.6.with-mousewheel.min.js"></script>
     <script src="js/FeedEk.js"></script>
     <script src="js/script.js"></script>
 
     <!-- YouTube embed player. See js/script.js for details. -->
     <div id="video-div">
-        <iframe id="yt-video" allowfullscreen></iframe>
+        <iframe id="yt-video" scrolling="no" allowfullscreen></iframe>
         <img id="lun-video-error" alt="LEGO Universe News!" width="83" src="images/lun.png" />
         <p class="font" id="video-error">This video is not available<br>on your device.</p>
     </div>

@@ -21,12 +21,12 @@
 }
 
 /* Gradient blank background */
-#background {
+/*#background {
     position: relative;
     left: 25px;
-    top: 46px;
+    top: 46px;*/
 /*    min-width: 6.25em;*/
-    max-width: 46.523em;
+/*    max-width: 46.523em;
     min-width: 46.523em;
     min-height: 19.063em;
     max-height: 19.063em;
@@ -34,7 +34,7 @@
     background: linear-gradient(#252525, #000000);
     background: -webkit-linear-gradient(#252525, #000000);
     border-radius: 35px;
-}
+}*/
 
 /* Container for the player */
 #video-div {
@@ -63,11 +63,9 @@
     color: #e6dede;
     /* TODO Use perfect-scrollbar */
     overflow-x: hidden;
-/*
     overflow-y: hidden;
     scrollbar-x: bottom;
     scrollbar-y: right;
-*/
 }
 
 #news-image {
