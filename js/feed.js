@@ -9,11 +9,13 @@
     <http://opensource.org/licenses/MIT>
 */
 
-$('#news-feed').FeedEk({
-    FeedUrl: "http://legouniversenews.wordpress.com/feed/",
-    MaxCount: 3,
-    ShowDesc: true,
-    ShowPubDate: false,
-    DescCharacterLimit :155,
-    TitleLinkTarget: "_blank"
+$(document).ready(function() {
+    $('#news-feed').FeedEk({
+        FeedUrl: "http://legouniversenews.wordpress.com/feed/",
+        MaxCount: 3,
+        ShowDesc: true,
+        ShowPubDate: false,
+        DescCharacterLimit :155,
+        TitleLinkTarget: "_blank"
+    });
 });

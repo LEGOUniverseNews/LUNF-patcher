@@ -88,28 +88,16 @@
 
 
     <!-- Pull in jQuery and our JS now that we need it -->
-    <script src="js/jquery-1.10.2.min.js"></script>
+    <script async src="js/jquery-1.10.2.min.js"></script>
 <!--
     <script src="js/jquery.mousewheel.js"></script>
     <script src="js/perfect-scrollbar-0.4.6.with-mousewheel.min.js"></script>
 -->
-    <script src="js/FeedEk.js"></script>
-    <script src="js/feed.js"></script>
-
-    <!-- <script>
-        /* RSS feed from LUN using the FeedEk jQuery plugin */
-        $('#news-feed').FeedEk({
-            FeedUrl: "http://legouniversenews.wordpress.com/feed/",
-            MaxCount: 3,
-            ShowDesc: true,
-            ShowPubDate: false,
-            DescCharacterLimit :155,
-            TitleLinkTarget: "_blank"
-        });
-    </script> -->
+    <script async src="js/FeedEk.js"></script>
+    <script async src="js/feed.js"></script>
 <!--    <script src="js/script.js"></script>-->
 
-    <script type="text/javascript">
+    <script>
         function downloadJSAtOnload() {
             var element = document.createElement("script");
             element.src = "js/script.js";

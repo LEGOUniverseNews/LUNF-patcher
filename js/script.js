@@ -13,16 +13,6 @@ $(document).ready(function() {
     // Open all links in new tabs
     $("a").attr("target", "_blank");
 
-//    /* RSS feed from LUN using the FeedEk jQuery plugin */
-//    $('#news-feed').FeedEk({
-//        FeedUrl: "http://legouniversenews.wordpress.com/feed/",
-//        MaxCount: 3,
-//        ShowDesc: true,
-//        ShowPubDate: false,
-//        DescCharacterLimit :155,
-//        TitleLinkTarget: "_blank"
-//    });
-
     /* YouTube embed player of current LEGO-related video
     preferably from the LEGO channel (http://www.youtube.com/user/LEGO
     */
@@ -42,7 +32,6 @@ $(document).ready(function() {
     $("#yt-video").attr("src", ytVideo + ytVideoParams);
 });
 
-//$(document).ready(function() {
 //    // Activate scroll bar
 //    $("#news-feed").perfectScrollbar({
 //        wheelSpeed: 30,
