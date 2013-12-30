@@ -28,6 +28,15 @@ $(document).ready(function() {
 
     // Give the iframe an src attribute of the new video
     document.getElementById("yt-video").src = ytDomain + ytVideo + ytVideoParams;
+    
+    $('#news-feed').FeedEk({
+        FeedUrl: "http://legouniversenews.wordpress.com/feed/",
+        MaxCount: 3,
+        ShowDesc: true,
+        ShowPubDate: false,
+        DescCharacterLimit :155,
+        TitleLinkTarget: "_blank"
+    });
 });
 
 //    // Activate scroll bar
