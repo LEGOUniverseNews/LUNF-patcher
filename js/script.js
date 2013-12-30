@@ -42,11 +42,11 @@ $(document).ready(function() {
     $("#yt-video").attr("src", ytVideo + ytVideoParams);
 });
 
-$(document).ready(function() {
-    // Activate scroll bar
-    $("#news-feed").perfectScrollbar({
-        wheelSpeed: 30,
-        suppressScrollX: true,
-        wheelPropagation: true
-    });
-});
+//$(document).ready(function() {
+//    // Activate scroll bar
+//    $("#news-feed").perfectScrollbar({
+//        wheelSpeed: 30,
+//        suppressScrollX: true,
+//        wheelPropagation: true
+//    });
+//});
