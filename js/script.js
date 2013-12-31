@@ -28,7 +28,7 @@ $(document).ready(function() {
 
     // Give the iframe an src attribute of the new video
     document.getElementById("yt-video").src = ytDomain + ytVideo + ytVideoParams;
-    
+
     // RSS feed of posts on LUN
     $("#news-feed-content").FeedEk({
         FeedUrl: "http://legouniversenews.wordpress.com/feed/",
