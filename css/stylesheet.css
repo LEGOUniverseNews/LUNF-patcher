@@ -45,13 +45,14 @@
     left: 414px;
     top: 90px;
     color: #e6dede;
-    /* TODO Use perfect-scrollbar */
-    overflow-x: hidden;
-    overflow-y: scroll;
-/*
-    scrollbar-x: bottom;
-    scrollbar-y: right;
-*/
+    overflow: hidden;
+}
+
+#news-feed-content {
+    position: absolute;
+    width: 335px;
+    height: 400px;
+    right: 15px;
 }
 
 #news-image {
@@ -110,22 +111,17 @@
     left: 680px;
 }
 
-/* Customize perfect-scrollbar */
-/*
+/* -------- perfect-scrollbar Styling -------- */
+
 .ps-scrollbar-y {
     background-color: #B3B3B3 !important;
     width: 9px !important;
 }
-*/
 
 /* Hide the scrollbar rail */
-/*
 .ps-scrollbar-y-rail {
     background-color: rgba(000, 000, 000, 000) !important;
-    top: 75px !important;
-    right :-2px !important;
 }
-*/
 
 /* -------- RSS Feed Styling -------- */
 
@@ -154,10 +150,15 @@
 }
 
 /* Display underline on hover to denote a link */
-.itemTitle a:hover{ text-decoration:underline; }
+.itemTitle a:hover, .itemContent a:hover { text-decoration:underline; }
 
 /* Change the size and color of the paragraph */
 .itemContent {
     font-size: 0.7em;
+    color: white;
+}
+
+/* Blend any links with the paragraph */
+.itemContent a {
     color: white;
 }

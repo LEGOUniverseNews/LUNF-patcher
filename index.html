@@ -16,7 +16,7 @@
     -->
     <!-- Open all links in new tabs -->
     <base target="_blank">
-    
+
     <style>
         html { position: relative; }
         body { position: relative; background-color: transparent; }
@@ -29,9 +29,7 @@
             position: relative;
             left: 1.563em;
             top: 2.875em;
-/*            min-width: 31.250em;*/
-            min-width: 46.523em;
-            max-width: 46.523em;
+            width: 46.523em;
             min-height: 19.063em;
             max-height: 19.063em;
             box-shadow: 0px 0px 5px 2px #9d6969;
@@ -44,12 +42,7 @@
     <!-- Pull in the Nunito font and our own CSS -->
     <link href="http://fonts.googleapis.com/css?family=Nunito:400" rel="prefetch stylesheet" type="text/css">
     <link href="css/stylesheet.css" rel="prefetch stylesheet" type="text/css">
-<!--    <link href="css/perfect-scrollbar-0.4.6.min.css" rel="stylesheet" type="text/css">-->
-
-<!--
-    <script src="js/jquery.mousewheel.js"></script>
-    <script src="js/perfect-scrollbar-0.4.6.with-mousewheel.min.js"></script>
--->
+    <link href="css/perfect-scrollbar-0.4.6.min.css" rel="prefetch stylesheet" type="text/css">
 </head>
 
 <body>
@@ -65,7 +58,9 @@
 
     <!-- LUN news feed, using the FeedEk jQuery addon
     http://jquery-plugins.net/FeedEk/FeedEk.html -->
-    <div id="news-feed">Loading News...</div>
+    <div id="news-feed">
+        <div id="news-feed-content">Loading News...</div>
+    </div>
 
     <!-- LUN Logo -->
     <a href="http://legouniversenews.wordpress.com/">
@@ -81,7 +76,7 @@
             <div class="font text-buttons" id="faq-text">FAQ</div></a>
 
         <!--  LUNF Rules button -->
-        <a href="http://legouniversenews.forummotion.com/t1-rules">
+        <a href="http://legouniversenews.forummotion.com/t1-rules-as-of-1-1-13">
             <div class="font text-buttons" id="rules-text">Rules</div></a>
 
         <!-- LUNF Staff Button -->
@@ -91,29 +86,12 @@
 
     <!-- Pull in jQuery now that we need it -->
     <script src="js/jquery-1.10.2.min.js"></script>
-<!--
-    <script src="js/jquery.mousewheel.js"></script>
-    <script src="js/perfect-scrollbar-0.4.6.with-mousewheel.min.js"></script>
--->
+    <script async src="js/jquery.mousewheel.js"></script>
+    <script async src="js/perfect-scrollbar-0.4.6.with-mousewheel.min.js"></script>
+    
     <!-- Load the FeedEk library and our settings asynchronously
         http://css-tricks.com/thinking-async/ -->
     <script async src="js/FeedEk.js"></script>
-<!--    <script src="js/script.js"></script>-->
-    
-    <!-- Delay the loading of the video player until the very end -->
-    <script>
-        function downloadJSAtOnload() {
-            var element = document.createElement("script");
-            element.src = "js/script.js";
-            document.body.appendChild(element);
-        }
-        if (window.addEventListener) {
-            window.addEventListener("load", downloadJSAtOnload, false);
-        } else if (window.attachEvent) {
-            window.attachEvent("onload", downloadJSAtOnload);
-        } else {
-            window.onload = downloadJSAtOnload;
-        }
-    </script>
+    <script async src="js/script.js"></script>
 </body>
 </html>
