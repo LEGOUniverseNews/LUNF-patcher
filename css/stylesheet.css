@@ -36,6 +36,16 @@
     z-index: 1;
 }
 
+/* Error message in case the video is not available */
+#video-error {
+    position: absolute;
+    text-align: center;
+    font-size: 21px;
+    bottom: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
 /* Size of RSS feed container from LUN */
 #news-feed {
     position: absolute;
@@ -76,24 +86,6 @@
     width: 0.063em;
     height: 0.000em;
     font-size: 1.438em;
-}
-
-/* Error message in case the video is not available */
-#video-error {
-    position: absolute;
-    text-align: center;
-    font-size: 21px;
-    top: 6.250em;
-    left: 8.438em;
-    z-index: 0;
-}
-
-/* LUN logo to display said message above */
-#lun-video-error {
-    position: absolute;
-    top: 2.500em;
-    left: 8.750em;
-    z-index: 0;
 }
 
 /* LUNF FAQ link */
