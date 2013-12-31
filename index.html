@@ -40,9 +40,9 @@
     </style>
 
     <!-- Pull in the Nunito font and our own CSS -->
-    <link href="http://fonts.googleapis.com/css?family=Nunito:400" rel="stylesheet prefetch" type="text/css">
-    <link href="css/stylesheet.css" rel="stylesheet prefetch" type="text/css">
-    <link href="css/perfect-scrollbar-0.4.6.min.css" rel="stylesheet prefetch" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Nunito:400" rel="prefetch stylesheet" type="text/css">
+    <link href="css/stylesheet.css" rel="prefetch stylesheet" type="text/css">
+    <link href="css/perfect-scrollbar-0.4.6.min.css" rel="prefetch stylesheet" type="text/css">
 </head>
 
 <body>
@@ -85,15 +85,14 @@
     </div>
 
     <!-- Pull in jQuery now that we need it -->
-<!--    <script src="js/jquery-1.10.2.min.js"></script>-->
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <!-- Now jquery.mousewheel and perfect-scrollbar -->
+    <!-- Now jquery.mousewheel and perfect-scrollbar... -->
     <script async src="js/jquery.mousewheel.js"></script>
     <script async src="js/perfect-scrollbar-0.4.6.with-mousewheel.min.js"></script>
 
     <!-- Load the FeedEk library and our settings asynchronously
         http://css-tricks.com/thinking-async/ -->
     <script async src="js/FeedEk.js"></script>
-    <script async src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
 </body>
 </html>
