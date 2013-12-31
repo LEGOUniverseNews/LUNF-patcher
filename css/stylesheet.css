@@ -78,14 +78,14 @@
     position: absolute;
     top: 58px;
     left: 565px;
-    font-family: "Impact", sans-serif;
+    font-family: Impact, sans-serif; 
     color: #e6dede;
     font-size: 20px;
 }
 
 /* General settings for all text */
 .font {
-    font-family: "Arial Rounded MT Bold", "Nunito", sans-serif;
+    font-family: "Nunito", Arial, sans-serif;
     font-weight: 400;
     color: #e6dede;
 }
@@ -143,7 +143,7 @@
 
 /* Use our favorite fonts */
 .itemTitle a, .itemContent {
-    font-family: "Arial Rounded MT Bold", "Nunito", sans-serif;
+    font-family: "Nunito", Arial, sans-serif;
 }
 
 /* Change the size and color of header */

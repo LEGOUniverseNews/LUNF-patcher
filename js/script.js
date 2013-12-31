@@ -30,7 +30,6 @@ $(document).ready(function() {
     document.getElementById("yt-video").src = ytDomain + ytVideo + ytVideoParams;
 
     // Adjust the CSS to align the feed
-    $("#news-feed-content").empty();
     $("#news-feed-content").css("right", "0.938em");
 
     // RSS feed of posts on LUN
