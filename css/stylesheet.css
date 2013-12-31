@@ -57,19 +57,30 @@
     overflow: hidden;
 }
 
+/* Location of feed on the background */
 #news-feed-content {
     position: absolute;
     width: 20.938em;
     height: 25.000em;
-    right: 0.938em;
+    right: -1em;
 }
 
-#news-image {
-/*  position: relative;
-    top: -15.313em; */
+/* "News from" label */
+#news-text {
     position: absolute;
-    top: 3.625em;
-    left: 26.875em;
+    top: 58px;
+    left: 450px;
+    font-size: 21px;
+}
+
+/* Stylized LEGO Universe News text */
+#news-from-lun {
+    position: absolute;
+    top: 58px;
+    left: 565px;
+    font-family: "Impact", sans-serif;
+    color: #e6dede;
+    font-size: 20px;
 }
 
 /* General settings for all text */
