@@ -3,7 +3,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LUNF Patcher</title>
+    
+    <!-- For IE 9 and lower, redirect to the previous Patcher version -->
+    <!--[if !lte IE 9]>
+        <meta http-equiv="Refresh" content="0.1; URL=http://legouniversenews.github.io/LUNF-patcher/site/">
+    <![endif]-->
+    <title>LEGO Universe News! Patcher</title>
     <!--
         LEGO Universe News! Patcher
 
@@ -18,19 +23,30 @@
     <base target="_blank">
 
     <style>
-        html {position:relative;}
-        body {position:relative;background-color:transparent;}
+        html { position: relative; }
+        body { position: relative; background-color: transparent; }
         /* Hide all default link decoration */
-        a {text-decoration:none;}
+        a { text-decoration: none; }
         /* Remove border around the YouTube player */
-        iframe {border:none;}
-        /* Gradient background */
-        #background {position:relative;left:1.563em;top:2.875em;width:46.523em;min-height:19.063em;max-height:19.063em;box-shadow:0 0 5px 2px #9d6969;background:linear-gradient(#252525, #000000);background:-webkit-linear-gradient(#252525, #000000);border-radius:2.188em;}
+        iframe { border: none; }
+        /* Gradient blank background */
+        #background {
+            position: relative;
+            left: 1.563em;
+            top: 2.875em;
+            width: 46.523em;
+            min-height: 19.063em;
+            max-height: 19.063em;
+            box-shadow: 0px 0px 5px 2px #9d6969;
+            background: linear-gradient(#252525, #000000);
+            background: -webkit-linear-gradient(#252525, #000000);
+            border-radius: 2.188em;
+        }
     </style>
 
     <!-- Pull in the Nunito font and our own CSS -->
     <link href="http://fonts.googleapis.com/css?family=Nunito:400" rel="prefetch stylesheet" type="text/css">
-    <link href="css/stylesheet-min.css" rel="prefetch stylesheet" type="text/css">
+    <link href="css/stylesheet.css" rel="prefetch stylesheet" type="text/css">
     <link href="css/perfect-scrollbar-0.4.6.min.css" rel="prefetch stylesheet" type="text/css">
 </head>
 
@@ -57,7 +73,7 @@
 
     <!-- News Header -->
     <img id="news-image" alt="LEGO News" width="346" height="29" src="images/NewsHeader.png" />
-    <!-- <span>LEGO News from</span> -->
+    <!-- <span>News from</span> -->
 
     <div id="forum-buttons">
         <!-- LUNF FAQ button -->
