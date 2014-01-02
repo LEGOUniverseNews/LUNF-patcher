@@ -7,7 +7,7 @@ and explains why it is called a patcher.
 
 The newswidget contains a YouTube video, links to the LUNF rules, FAQ, and Staff Memebers, in addtion to a news feed.
 The HTML5 YouTube embed player can be changed by updating the variable in [`js/script.js`](js/script.js).
-The news feed pulls news from [_LEGO Universe News!_](http://legouniversenews.wordpress.com/).
+The news feed pulls news from [_LEGO Universe News!_](http://legouniversenews.wordpress.com/)
 ## Dependencies ##
 
 The **_LEGO Universe News!_ Patcher** makes use of features in these fine open-source projects:
