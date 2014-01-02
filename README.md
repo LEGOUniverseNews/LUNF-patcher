@@ -1,14 +1,13 @@
-# LEGO Universe News! Patcher #
+# _LEGO Universe News!_ Patcher #
 
-This is a "patcher" for the [LEGO Universe News! Forums](http://legouniversenews.forummotion.com/).
+This is a "patcher" for the [_LEGO Universe News!_ Forums](http://legouniversenews.forummotion.com/).
 This "patcher" is actually a newswidget created completely by rioforce.
 It was designed to imitate one of the many patchers from the now-closed MMOG [LEGO® Universe](http://universe.lego.com/en-us/default.aspx),
 and explains why it is called a patcher.
 
 The newswidget contains a YouTube video, links to the LUNF rules, FAQ, and Staff Memebers, in addtion to a news feed.
 The HTML5 YouTube embed player can be changed by updating the variable in [`js/script.js`](js/script.js).
-The news feed pulls news from [LEGO Universe News!](http://legouniversenews.wordpress.com/) using the services from [http://feed.mikle.com](http://feed.mikle.com/)
-
+The news feed pulls news from [_LEGO Universe News!_](http://legouniversenews.wordpress.com/).
 ## Dependencies ##
 
 The **_LEGO Universe News!_ Patcher** makes use of features in these fine open-source projects:
@@ -17,6 +16,11 @@ The **_LEGO Universe News!_ Patcher** makes use of features in these fine open-s
 * [jQuery](https://jquery.com/)
 * [jQuery Mouse Wheel Plugin](https://github.com/brandonaaron/jquery-mousewheel#readme)
 * [perfect-scrollbar](https://github.com/noraesae/perfect-scrollbar#readme)
+
+## Contributing ##
+
+If you would like to contribute to the development of the **_LEGO Universe News!_ Patcher**,
+please consult [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## License ##
 
