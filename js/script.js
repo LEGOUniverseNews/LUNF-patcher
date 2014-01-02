@@ -10,6 +10,7 @@
 */
 
 $(document).ready(function() {
+    "use strict";
     /* YouTube embed player of current LEGO-related video
     preferably from the LEGO channel (http://www.youtube.com/user/LEGO
     */
@@ -41,7 +42,7 @@ $(document).ready(function() {
         DescCharacterLimit: 155,
         TitleLinkTarget: "_blank"
     });
-    
+
     var $newsFeed = $("#news-feed");
     // Activate perfect-scrollbar
     $newsFeed.perfectScrollbar({
@@ -51,5 +52,5 @@ $(document).ready(function() {
     });
     // Always scroll to the top of the feed on page load
     $newsFeed.scrollTop(0);
-    $$newsFeed.perfectScrollbar('update');
+    $newsFeed.perfectScrollbar('update');
 });
