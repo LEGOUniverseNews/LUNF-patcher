@@ -19,7 +19,7 @@ $(document).ready(function() {
     you would take "g8-4wXkT60c" and paste it between the double quotess.
     Thus the new value of "ytVideo" would be "g8-4wXkT60c".
     */
-    var ytVideo = "YEtjhWwUv2g";
+    var ytVideo = "n71HJwNS_so";
 
     /* YouTube domain and player parameters. Full list and definitions at
     https://developers.google.com/youtube/player_parameters#Parameters */
@@ -41,14 +41,15 @@ $(document).ready(function() {
         DescCharacterLimit: 155,
         TitleLinkTarget: "_blank"
     });
-
+    
+    var $newsFeed = $("#news-feed");
     // Activate perfect-scrollbar
-    $("#news-feed").perfectScrollbar({
+    $newsFeed.perfectScrollbar({
         wheelSpeed: 30,
         suppressScrollX: true,
         wheelPropagation: true
     });
     // Always scroll to the top of the feed on page load
-    $("#news-feed").scrollTop(0);
-    $("#news-feed").perfectScrollbar('update');
+    $newsFeed.scrollTop(0);
+    $$newsFeed.perfectScrollbar('update');
 });
