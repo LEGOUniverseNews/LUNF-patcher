@@ -28,4 +28,4 @@ Licensed under [The MIT License](http://opensource.org/licenses/MIT).
 
 LEGO®, and the LEGO® Minifigure is a trademark of The LEGO Group of companies which does not sponsor, authorize or endorse this site, or project. For more information, please visit the [LEGO Fair Play Policy](http://aboutus.lego.com/en-us/legal-notice/fair-play/)
 
-Copyright :copyright: 2013-2014 [@rioforce](https://github.com/rioforce/), created 2013-2014 [Triangle717](https://github.com/le717/)
+Copyright :copyright: 2013-2014 [rioforce](https://github.com/rioforce/), created 2013-2014 [Triangle717](https://github.com/le717/)
