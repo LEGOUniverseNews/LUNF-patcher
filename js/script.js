@@ -47,8 +47,7 @@ $(document).ready(function() {
     // Activate perfect-scrollbar
     $newsFeed.perfectScrollbar({
         wheelSpeed: 30,
-        suppressScrollX: true,
-        wheelPropagation: true
+        suppressScrollX: true
     });
     // Always scroll to the top of the feed on page load
     $newsFeed.scrollTop(0);
