@@ -30,9 +30,6 @@ $(document).ready(function() {
     // Give the iframe an src attribute of the new video
     document.getElementById("yt-video").src = ytDomain + ytVideo + ytVideoParams;
 
-    // Adjust the CSS to align the feed
-    $("#news-feed-content").css("right", "0.938em");
-
     // RSS feed of posts on LUN
     $("#news-feed-content").FeedEk({
         FeedUrl: "http://legouniversenews.wordpress.com/feed/",
@@ -42,6 +39,9 @@ $(document).ready(function() {
         DescCharacterLimit: 155,
         TitleLinkTarget: "_blank"
     });
+    
+    // Adjust the CSS to align the feed
+    $("#news-feed-content").css("right", "0.938em");
 
     var $newsFeed = $("#news-feed");
     // Activate perfect-scrollbar
