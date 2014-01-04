@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/*
+    LEGO Universe News! Patcher
+
+    Created 2013-2014 Triangle717 & rioforce
+    <http://Triangle717.WordPress.com/>
+    <http://rioforce.WordPress.com/>
+
+    Licensed under The MIT License
+    <http://opensource.org/licenses/MIT>
+*/
+
+/* LUN Logo at the top */
+#lun-logo {
+    position: absolute;
+    left: 22.438em;
+    top: 0.000em;
+    z-index: 2;
+}
+
+/* Container for the player */
+#video-div {
+    position: absolute;
+    left: 2.500em;
+    top: 3.125em;
+}
+
+/* Size and position of YouTube embed player */
+#yt-video {
+    position: relative;
+    overflow: hidden;
+    width: 22.188em;
+    top: 0.625em;
+    left: 0.125em;
+    height: 16.875em;
+    z-index: 1;
+}
+
+/* Error message in case the video is not available */
+#video-error {
+    position: absolute;
+    text-align: center;
+    font-size: 21px;
+    bottom: 20px;
+    left: 30px;
+    z-index: 0;
+}
+
+/* Size of RSS feed container from LUN */
+#news-feed {
+    position: absolute;
+    width: 20.938em;
+    height: 12.813em;
+    left: 25.875em;
+    top: 5.625em;
+    color: #e6dede;
+    overflow: hidden;
+}
+
+/* Location of feed on the background */
+#news-feed-content {
+    position: absolute;
+    width: 20.938em;
+    height: 25.000em;
+    right: -1em;
+}
+
+/* "News from" label */
+#news-text {
+    position: absolute;
+    top: 58px;
+    left: 450px;
+    font-size: 21px;
+}
+
+/* Stylized LEGO Universe News text */
+#news-from-lun {
+    position: absolute;
+    top: 59px;
+    left: 565px;
+    font-family: Impact, "Nunito", sans-serif;
+    color: #e6dede;
+    font-size: 20px;
+}
+
+/* General settings for all text */
+.font {
+    font-family: "Nunito", Arial, sans-serif;
+    font-weight: 400;
+    color: #e6dede;
+}
+
+/* Align the main text buttons correctly */
+.text-buttons {
+    position: relative;
+    bottom: 0.063em;
+    width: 0.063em;
+    height: 0.000em;
+    font-size: 1.438em;
+}
+
+/* LUNF FAQ link */
+#faq-text {
+    left: 425px;
+}
+
+/* LUNF Rules link */
+#rules-text {
+    left: 540px;
+}
+
+/* LUNF Staff Members page link */
+#staff-text {
+    left: 680px;
+}
+
+/* -------- perfect-scrollbar Styling -------- */
+
+.ps-scrollbar-y {
+    background-color: #B3B3B3 !important;
+    width: 9px !important;
+}
+
+/* Hide the scrollbar rail */
+.ps-scrollbar-y-rail {
+    background-color: rgba(000, 000, 000, 000) !important;
+}
+
+/* -------- RSS Feed Styling -------- */
+
+/* Resize header font */
+.itemTitle {
+    position: relative;
+    top: 0.375em;
+}
+
+/* Align the list */
+.feedEkList li {
+    position: relative;
+    list-style: none;
+    top: -1.313em;
+}
+
+/* Use our favorite fonts */
+.itemTitle a, .itemContent {
+    font-family: "Nunito", Arial, sans-serif;
+}
+
+/* Change the size and color of header */
+.itemTitle a {
+    font-size: 0.9em;
+    color: #C6C6C6;
+}
+
+/* Display underline on hover to denote a link */
+.itemTitle a:hover, .itemContent a:hover { text-decoration:underline; }
+
+/* Change the size and color of the paragraph */
+.itemContent {
+    font-size: 0.7em;
+    color: white;
+}
+
+/* Blend any links with the paragraph */
+.itemContent a { color: white; }
