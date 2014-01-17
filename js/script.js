@@ -33,11 +33,13 @@
     var randomVideoIndex = Math.floor((Math.random() * videoRequestCount));
     var queryString = "?v=2&alt=jsonc&max-results=" + videoRequestCount;
 
+    // This is the string we are sending to the YouTube Data API
     var apiString = apiBaseUrl + playlistId + queryString;
     console.log("Fetching YouTube data from: " + apiString);
 
     var video;
 
+    // If the video ID is null or undefined, we use a playlist and select a video at random
     if (ytVideoId == null)
     {    
         $.getJSON(apiString, function(data)
@@ -48,6 +50,7 @@
             // If something went bad...
             if (video == null)
             {
+                // Display an error message instead of the YouTube iframe
                 document.getElementById("video-div").innerHTML = '<img id="video-error" alt="Video error" src="img/video-error.png" />';
             }
             else
@@ -60,6 +63,7 @@
     }
     else
     {
+        // Use a specific ID instead of selecting one at random from a playlist
         document.getElementById("video-div").innerHTML = '<iframe id="yt-video" allowfullscreen></iframe>';
         document.getElementById("yt-video").src = ytDomain + ytVideoId + ytVideoParams;
     }
