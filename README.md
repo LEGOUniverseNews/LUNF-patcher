@@ -14,7 +14,7 @@ The news feed pulls from [_LEGO Universe News!_](http://legouniversenews.wordpre
 
 The **_LEGO Universe News!_ Patcher** makes use of features in these fine open-source projects:
 
-* [Grunt](http://gruntjs.com/)
+* [Grunt.js](http://gruntjs.com/)
 * [jQuery](https://jquery.com/)
 * [FeedEk jQuery RSS/ATOM Feed Plugin](https://github.com/enginkizil/FeedEk#readme)
 * [jQuery Mouse Wheel Plugin](https://github.com/brandonaaron/jquery-mousewheel#readme)

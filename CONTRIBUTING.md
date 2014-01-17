@@ -20,15 +20,14 @@ when developing to ensure everything is rendered and loaded correctly.
 
 ## Conventions ##
 
-* HTML5 and CSS3 is utilized in the project, and will not support browsers
-    * `<=` IE 9
+* HTML5 and CSS3 is utilized in the project, and will only support
+    * `<=` IE 10
     * The newest release of Firefox and Chrome (plus the previous one)
     * The newest release of Opera
 
 * Be sure to perform cross-browser tests for the supported browsers.
 * Please do not change anything under the `Legacy` folder. That is the previous version of the browser, kept only for older browsers.
 * Make sure your code is valid! Use the [W3C Markup Validation Service](http://validator.w3.org) and the [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/) for your HTML and CSS, respectively.
-*  [JHint](http://jshint.com) is used for JavaScript validation, e.g syntax errors, possible errors, or bad coding practices.
-
-* All CSS and JavaScript is minified once it is deemed final. The [Microsoft Ajax Minifier](http://ajaxmin.codeplex.com) is used to perform this action.
-All minified code has `-min` appended to the root filename (e.g. `stylesheet-min.css`).
+* [Grunt.js](http://gruntjs.com/) is used to validate JavaScript, in addition to minifying CSS and JavaScript.
+You are **strongly** encouraged to run `grunt watch` while editing and to automatically minify the CSS and JavaScript for testing.
+A Travis CI builder should test your pull request as well to ensure everything checks out.
