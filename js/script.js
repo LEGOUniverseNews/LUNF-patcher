@@ -7,12 +7,15 @@
 
     Licensed under The MIT License
     <http://opensource.org/licenses/MIT>
-*/
+    */
 
-$(document).ready(function() {
-    "use strict";
+    $(document).ready(function() {
+        "use strict";
 
     // Gets a random YouTube video from a specified playlist within parameters. 
+
+    // Assign value for specific video ID. Otherwise, leave defined without assignment.
+    var ytVideoId;
 
     var ytDomain = "http://www.youtube.com/embed/";
     var ytVideoParams = "?html5=1&rel=0&autohide=1&modestbranding=1";
@@ -35,24 +38,31 @@ $(document).ready(function() {
 
     var video;
 
-    $.getJSON(apiString, function(data)
+    if (ytVideoId == null)
+    {    
+        $.getJSON(apiString, function(data)
+        {
+            // Get a random video
+            video = data.data.items[randomVideoIndex].video;
+
+            // If something went bad...
+            if (video == null)
+            {
+                document.getElementById("video-div").innerHTML = '<img id="video-error" alt="Video error" src="img/video-error.png" />';
+            }
+            else
+            {
+                // Assign the YouTube embed code after we select a video.
+                document.getElementById("video-div").innerHTML = '<iframe id="yt-video" allowfullscreen></iframe>';
+                document.getElementById("yt-video").src = ytDomain + video.id + ytVideoParams;
+            }
+        });
+    }
+    else
     {
-        // Get a random video
-        video = data.data.items[randomVideoIndex].video;
-
-        // If something went bad...
-        if (video == null)
-        {
-            document.getElementById("video-div").innerHTML = '<img id="video-error" alt="Video error" src="img/video-error.png" />';
-        }
-        else
-        {
-            // Assign the YouTube embed code after we select a video.
-            document.getElementById("video-div").innerHTML = '<iframe id="yt-video" allowfullscreen></iframe>';
-            document.getElementById("yt-video").src = ytDomain + video.id + ytVideoParams;
-        }
-
-    });
+        document.getElementById("video-div").innerHTML = '<iframe id="yt-video" allowfullscreen></iframe>';
+        document.getElementById("yt-video").src = ytDomain + ytVideoId + ytVideoParams;
+    }
 
     // RSS feed of posts on LUN
     $("#news-feed-content").FeedEk({
