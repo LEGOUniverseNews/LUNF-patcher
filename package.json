@@ -1,0 +1,34 @@
+{
+  "name": "LEGO Universe News! Patcher",
+  "version": "2.0.0",
+  "description": "News widget for LEGO Universe News! Forums",
+  "main": "index.html",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LEGOUniverseNews/LUN-Patcher.git"
+  },
+  "keywords": [
+    "Triangle717",
+    "le717",
+    "rioforce",
+    "LUN",
+    "LUNF",
+    "LEGO Universe News!",
+    "LEGO Universe News! Forums"
+  ],
+  "author": "Triangle717 and rioforce",
+  "license": "The MIT License",
+  "bugs": {
+    "url": "https://github.com/LEGOUniverseNews/LUN-Patcher/issues/"
+  },
+  "homepage": "http://legouniversenews.forummotion.com/",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-cssmin": "~0.7.0"
+  }
+}

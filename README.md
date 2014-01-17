@@ -1,5 +1,7 @@
 # _LEGO Universe News!_ Patcher #
 
+[![Build Status](https://travis-ci.org/LEGOUniverseNews/LUN-Patcher.png?branch=gh-pages)](https://travis-ci.org/LEGOUniverseNews/LUN-Patcher) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
 This is a "patcher" (actually a news widget) designed for the [_LEGO Universe News!_ Forums](http://legouniversenews.forummotion.com/).
 It is designed to imitate one of the later patchers from the now-closed MMOG [LEGO® Universe](http://universe.lego.com/en-us/default.aspx),
 and explains why it is called a patcher.
@@ -12,6 +14,7 @@ The news feed pulls from [_LEGO Universe News!_](http://legouniversenews.wordpre
 
 The **_LEGO Universe News!_ Patcher** makes use of features in these fine open-source projects:
 
+* [Grunt](http://gruntjs.com/)
 * [jQuery](https://jquery.com/)
 * [FeedEk jQuery RSS/ATOM Feed Plugin](https://github.com/enginkizil/FeedEk#readme)
 * [jQuery Mouse Wheel Plugin](https://github.com/brandonaaron/jquery-mousewheel#readme)
