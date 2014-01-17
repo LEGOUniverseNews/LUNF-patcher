@@ -40,7 +40,7 @@
     var video;
 
     // If the video ID is null or undefined, we use a playlist and select a video at random
-    if (ytVideoId == null)
+    if (!ytVideoId)
     {    
         $.getJSON(apiString, function(data)
         {
@@ -48,7 +48,7 @@
             video = data.data.items[randomVideoIndex].video;
 
             // If something went bad...
-            if (video == null)
+            if (!video)
             {
                 // Display an error message instead of the YouTube iframe
                 document.getElementById("video-div").innerHTML = '<img id="video-error" alt="Video error" src="img/video-error.png" />';
