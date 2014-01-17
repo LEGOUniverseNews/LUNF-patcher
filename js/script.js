@@ -37,20 +37,20 @@ $(document).ready(function() {
 
     $.getJSON(apiString, function(data)
     {
-    	// Get a random video
-    	video = data.data.items[randomVideoIndex].video;
+        // Get a random video
+        video = data.data.items[randomVideoIndex].video;
 
-    	// If something went bad...
-		if (video == null)
-    	{
-			document.getElementById("video-div").innerHTML = '<img id="video-error" alt="Video error" src="img/video-error.png" />';
-		}
-		else
-		{
-	    	// Assign the YouTube embed code after we select a video.
-			document.getElementById("video-div").innerHTML = '<iframe id="yt-video" allowfullscreen></iframe>';
-			document.getElementById("yt-video").src = ytDomain + video.id + ytVideoParams;
-		}
+        // If something went bad...
+        if (video == null)
+        {
+            document.getElementById("video-div").innerHTML = '<img id="video-error" alt="Video error" src="img/video-error.png" />';
+        }
+        else
+        {
+            // Assign the YouTube embed code after we select a video.
+            document.getElementById("video-div").innerHTML = '<iframe id="yt-video" allowfullscreen></iframe>';
+            document.getElementById("yt-video").src = ytDomain + video.id + ytVideoParams;
+        }
 
     });
 
