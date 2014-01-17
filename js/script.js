@@ -40,8 +40,18 @@ $(document).ready(function() {
     	// Get a random video
     	video = data.data.items[randomVideoIndex].video;
 
-    	// Assign the YouTube embed code after we select a video.
-		document.getElementById("yt-video").src = ytDomain + video.id + ytVideoParams;
+    	// If something went bad...
+		if (video == null)
+    	{
+			document.getElementById("video-div").innerHTML = '<img id="video-error" alt="Video error" src="img/video-error.png" />';
+		}
+		else
+		{
+	    	// Assign the YouTube embed code after we select a video.
+			document.getElementById("video-div").innerHTML = '<iframe id="yt-video" allowfullscreen></iframe>';
+			document.getElementById("yt-video").src = ytDomain + video.id + ytVideoParams;
+		}
+
     });
 
     // RSS feed of posts on LUN
