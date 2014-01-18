@@ -30,4 +30,3 @@ when developing to ensure everything is rendered and loaded correctly.
 * Make sure your code is valid! Use the [W3C Markup Validation Service](http://validator.w3.org) and the [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/) for your HTML and CSS, respectively.
 * [Grunt.js](http://gruntjs.com/) is used to validate JavaScript, in addition to minifying CSS and JavaScript.
 You are **strongly** encouraged to run `grunt watch` while editing and to automatically minify the CSS and JavaScript for testing.
-A Travis CI builder should test your pull request as well to ensure everything checks out.

@@ -14,7 +14,9 @@
     // Gets a random YouTube video from a specified playlist within parameters.
     // Assign value for specific video ID. Otherwise, leave defined as `null`.
     var ytVideoId = null;
-
+        
+    // YouTube domain and player parameters. Full list and definitions at
+    // https://developers.google.com/youtube/player_parameters#Parameters
     var ytDomain = "http://www.youtube.com/embed/";
     var ytVideoParams = "?html5=1&rel=0&autohide=1&modestbranding=1";
 
