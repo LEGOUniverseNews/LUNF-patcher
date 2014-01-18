@@ -1,10 +1,10 @@
 {
-  "name": "LEGO Universe News! Patcher",
+  "name": "LUN-Patcher",
   "version": "2.0.0",
   "description": "News widget for LEGO Universe News! Forums",
   "main": "index.html",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt default"
   },
   "repository": {
     "type": "git",
