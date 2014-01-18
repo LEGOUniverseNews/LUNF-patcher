@@ -11,23 +11,19 @@
 
     $(document).ready(function() {
         "use strict";
-
-    // Gets a random YouTube video from a specified playlist within parameters. 
-
-    // Assign value for specific video ID. Otherwise, leave defined without assignment.
-    var ytVideoId;
+    // Gets a random YouTube video from a specified playlist within parameters.
+    // Assign value for specific video ID. Otherwise, leave defined as `null`.
+    var ytVideoId = null;
 
     var ytDomain = "http://www.youtube.com/embed/";
     var ytVideoParams = "?html5=1&rel=0&autohide=1&modestbranding=1";
 
-    // TODO: should probably change this to a more suitable playlist... :P
-    
-    // YouTube playlist id, i.e. the "list" parameter in regular YouTube queries. 
+    // YouTube playlist id, i.e. the "list" parameter in regular YouTube queries.
     var playlistId = "PLRNbTEZ7dhL1TMtx5-LePt3XwP7Zfeeta";
     var apiBaseUrl = "https://gdata.youtube.com/feeds/api/playlists/";
 
-    // Higher numbers will lead to bigger requests, but more varied videos. 
-    // Needs to be under 50 to comply with YouTube Data API limitations. 
+    // Higher numbers will lead to bigger requests, but more varied videos.
+    // Needs to be under 50 to comply with YouTube Data API limitations.
     var videoRequestCount = 10;
 
     var randomVideoIndex = Math.floor((Math.random() * videoRequestCount));
@@ -40,29 +36,23 @@
     var video;
 
     // If the video ID is null or undefined, we use a playlist and select a video at random
-    if (!ytVideoId)
-    {    
-        $.getJSON(apiString, function(data)
-        {
+    if (!ytVideoId) {
+        $.getJSON(apiString, function(data) {
             // Get a random video
             video = data.data.items[randomVideoIndex].video;
 
-            // If something went bad...
-            if (!video)
-            {
+            // If the video did not load...
+            if (!video) {
                 // Display an error message instead of the YouTube iframe
                 document.getElementById("video-div").innerHTML = '<img id="video-error" alt="Video error" src="img/video-error.png" />';
-            }
-            else
-            {
+            // The video did load
+            } else {
                 // Assign the YouTube embed code after we select a video.
                 document.getElementById("video-div").innerHTML = '<iframe id="yt-video" allowfullscreen></iframe>';
                 document.getElementById("yt-video").src = ytDomain + video.id + ytVideoParams;
             }
         });
-    }
-    else
-    {
+    } else {
         // Use a specific ID instead of selecting one at random from a playlist
         document.getElementById("video-div").innerHTML = '<iframe id="yt-video" allowfullscreen></iframe>';
         document.getElementById("yt-video").src = ytDomain + ytVideoId + ytVideoParams;
@@ -77,7 +67,7 @@
         DescCharacterLimit: 155,
         TitleLinkTarget: "_blank"
     });
-    
+
     // Adjust the CSS to align the feed
     $("#news-feed-content").css("right", "0.938em");
 
@@ -87,6 +77,7 @@
         wheelSpeed: 30,
         suppressScrollX: true
     });
+
     // Always scroll to the top of the feed on page load
     $newsFeed.scrollTop(0);
     $newsFeed.perfectScrollbar('update');

@@ -48,11 +48,12 @@
     z-index: 0;
 }
 
+/* Video loading gif */
 #video-loading {
     position: relative;
     top: 120px;
     left: 160px;
-    z-index: 0; 
+    z-index: 0;
 }
 
 /* Size of RSS feed container from LUN */
