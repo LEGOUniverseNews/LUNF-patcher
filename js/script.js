@@ -7,28 +7,66 @@
 
     Licensed under The MIT License
     <http://opensource.org/licenses/MIT>
-*/
-
-$(document).ready(function() {
-    "use strict";
-    /* YouTube embed player of current LEGO-related video
-    preferably from the LEGO channel (http://www.youtube.com/user/LEGO
     */
 
-    /* FUTURE When updating the YouTube video, always get the code directly after
-    "watch?v=". For example, if you wanted to embed "http://www.youtube.com/watch?v=g8-4wXkT60c",
-    you would take "g8-4wXkT60c" and paste it between the double quotess.
-    Thus the new value of "ytVideo" would be "g8-4wXkT60c".
-    */
-    var ytVideo = "n71HJwNS_so";
+    $(document).ready(function() {
+        "use strict";
 
-    /* YouTube domain and player parameters. Full list and definitions at
-    https://developers.google.com/youtube/player_parameters#Parameters */
+    // Gets a random YouTube video from a specified playlist within parameters. 
+
+    // Assign value for specific video ID. Otherwise, leave defined without assignment.
+    var ytVideoId;
+
     var ytDomain = "http://www.youtube.com/embed/";
     var ytVideoParams = "?html5=1&rel=0&autohide=1&modestbranding=1";
 
-    // Give the iframe an src attribute of the new video
-    document.getElementById("yt-video").src = ytDomain + ytVideo + ytVideoParams;
+    // TODO: should probably change this to a more suitable playlist... :P
+    
+    // YouTube playlist id, i.e. the "list" parameter in regular YouTube queries. 
+    var playlistId = "PLRNbTEZ7dhL1TMtx5-LePt3XwP7Zfeeta";
+    var apiBaseUrl = "https://gdata.youtube.com/feeds/api/playlists/";
+
+    // Higher numbers will lead to bigger requests, but more varied videos. 
+    // Needs to be under 50 to comply with YouTube Data API limitations. 
+    var videoRequestCount = 10;
+
+    var randomVideoIndex = Math.floor((Math.random() * videoRequestCount));
+    var queryString = "?v=2&alt=jsonc&max-results=" + videoRequestCount;
+
+    // This is the string we are sending to the YouTube Data API
+    var apiString = apiBaseUrl + playlistId + queryString;
+    console.log("Fetching YouTube data from: " + apiString);
+
+    var video;
+
+    // If the video ID is null or undefined, we use a playlist and select a video at random
+    if (!ytVideoId)
+    {    
+        $.getJSON(apiString, function(data)
+        {
+            // Get a random video
+            video = data.data.items[randomVideoIndex].video;
+
+            // If something went bad...
+            if (!video)
+            {
+                // Display an error message instead of the YouTube iframe
+                document.getElementById("video-div").innerHTML = '<img id="video-error" alt="Video error" src="img/video-error.png" />';
+            }
+            else
+            {
+                // Assign the YouTube embed code after we select a video.
+                document.getElementById("video-div").innerHTML = '<iframe id="yt-video" allowfullscreen></iframe>';
+                document.getElementById("yt-video").src = ytDomain + video.id + ytVideoParams;
+            }
+        });
+    }
+    else
+    {
+        // Use a specific ID instead of selecting one at random from a playlist
+        document.getElementById("video-div").innerHTML = '<iframe id="yt-video" allowfullscreen></iframe>';
+        document.getElementById("yt-video").src = ytDomain + ytVideoId + ytVideoParams;
+    }
 
     // RSS feed of posts on LUN
     $("#news-feed-content").FeedEk({

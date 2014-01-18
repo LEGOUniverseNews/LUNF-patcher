@@ -21,8 +21,10 @@
 /* Container for the player */
 #video-div {
     position: absolute;
-    left: 2.500em;
+    width: 22.188em;
     top: 3.125em;
+    left: 2.500em;
+    height: 16.875em;
 }
 
 /* Size and position of YouTube embed player */
@@ -44,6 +46,13 @@
     bottom: 20px;
     left: 30px;
     z-index: 0;
+}
+
+#video-loading {
+    position: relative;
+    top: 120px;
+    left: 160px;
+    z-index: 0; 
 }
 
 /* Size of RSS feed container from LUN */
