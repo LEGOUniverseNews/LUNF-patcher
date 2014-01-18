@@ -37,7 +37,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-cssmin");
   grunt.loadNpmTasks("grunt-contrib-watch");
 
-  // Define our tasks. `test` is used for Travis CI
+  // Define our tasks.
   grunt.registerTask("default", ["cssmin", "jshint"]);
-  grunt.registerTask("test", ["cssmin", "jshint"]);
 };
