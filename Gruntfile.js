@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 
     // Lint check any JavaScript
     jshint: {
-      files: ["package.json", "gruntfile.js", "js/script.js"],
+      files: ["package.json", "Gruntfile.js", "js/script.js"],
       options: {
         globals: {
           jQuery: true

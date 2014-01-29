@@ -9,12 +9,12 @@
     <http://opensource.org/licenses/MIT>
     */
 
-    $(document).ready(function() {
-        "use strict";
+$(document).ready(function() {
+    "use strict";
     // Gets a random YouTube video from a specified playlist within parameters.
     // Assign value for specific video ID. Otherwise, leave defined as `null`.
-    var ytVideoId = null;
-        
+    var ytVideoId = "cH4tMSd3QJY";
+
     // YouTube domain and player parameters. Full list and definitions at
     // https://developers.google.com/youtube/player_parameters#Parameters
     var ytDomain = "http://www.youtube.com/embed/";
@@ -46,17 +46,20 @@
             // If the video did not load...
             if (!video) {
                 // Display an error message instead of the YouTube iframe
-                document.getElementById("video-div").innerHTML = '<img id="video-error" alt="Video error" src="img/video-error.png" />';
+                document.getElementById("video-div").innerHTML =
+                    '<img id="video-error" alt="Video error" src="img/video-error.png" />';
             // The video did load
             } else {
                 // Assign the YouTube embed code after we select a video.
-                document.getElementById("video-div").innerHTML = '<iframe id="yt-video" allowfullscreen></iframe>';
+                document.getElementById("video-div").innerHTML =
+                    '<iframe id="yt-video" allowfullscreen></iframe>';
                 document.getElementById("yt-video").src = ytDomain + video.id + ytVideoParams;
             }
         });
     } else {
         // Use a specific ID instead of selecting one at random from a playlist
-        document.getElementById("video-div").innerHTML = '<iframe id="yt-video" allowfullscreen></iframe>';
+        document.getElementById("video-div").innerHTML =
+            '<iframe id="yt-video" allowfullscreen></iframe>';
         document.getElementById("yt-video").src = ytDomain + ytVideoId + ytVideoParams;
     }
 
