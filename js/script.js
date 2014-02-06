@@ -12,8 +12,8 @@
 $(document).ready(function() {
     "use strict";
     // Gets a random YouTube video from a specified playlist within parameters. //ADD SINGLE VIDEO URL HERE//
-    // Assign value for specific video ID. Otherwise, leave defined as `null`.
-    var ytVideoId = "null";
+    // Assign value for specific video ID. Otherwise, leave defined as `null` (not enclosed in quotes).
+    var ytVideoId = null;
 
     // YouTube domain and player parameters. Full list and definitions at
     // https://developers.google.com/youtube/player_parameters#Parameters
