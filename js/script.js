@@ -18,7 +18,7 @@ $(document).ready(function() {
     // YouTube domain and player parameters. Full list and definitions at
     // https://developers.google.com/youtube/player_parameters#Parameters
     var ytDomain = "http://www.youtube.com/embed/";
-    var ytVideoParams = "?html5=1&rel=0&autohide=1&modestbranding=1";
+    var ytVideoParams = "?html5=1&rel=0&autohide=1&modestbranding=1&fs=1";
 
     // YouTube playlist id, i.e. the "list" parameter in regular YouTube queries. //ADD PLAYLIST URL HERE//
     var playlistId = "PLVfin74Qx3tWkukr46pCWGeyGd21b8ZjI";
