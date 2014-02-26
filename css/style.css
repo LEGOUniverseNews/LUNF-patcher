@@ -14,7 +14,7 @@
 #lun-logo {
     position: absolute;
     left: 22.438em;
-    top: 0.000em;
+    top: 0;
     z-index: 2;
 }
 
@@ -105,24 +105,18 @@
     position: relative;
     bottom: 0.063em;
     width: 0.063em;
-    height: 0.000em;
+    height: 0;
     font-size: 1.438em;
 }
 
 /* LUNF FAQ link */
-#faq-text {
-    left: 425px;
-}
+#faq-text { left: 425px; }
 
 /* LUNF Rules link */
-#rules-text {
-    left: 540px;
-}
+#rules-text { left: 540px; }
 
 /* LUNF Staff Members page link */
-#staff-text {
-    left: 680px;
-}
+#staff-text { left: 680px; }
 
 /* -------- perfect-scrollbar Styling -------- */
 
@@ -132,9 +126,7 @@
 }
 
 /* Hide the scrollbar rail */
-.ps-scrollbar-y-rail {
-    background-color: rgba(000, 000, 000, 000) !important;
-}
+.ps-scrollbar-y-rail { background-color: rgba(000, 000, 000, 000) !important; }
 
 /* -------- RSS Feed Styling -------- */
 
@@ -152,9 +144,7 @@
 }
 
 /* Use our favorite fonts */
-.itemTitle a, .itemContent {
-    font-family: "Nunito", Arial, sans-serif;
-}
+.itemTitle a, .itemContent { font-family: "Nunito", Arial, sans-serif; }
 
 /* Change the size and color of header */
 .itemTitle a {

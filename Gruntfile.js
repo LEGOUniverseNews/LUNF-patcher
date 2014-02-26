@@ -3,6 +3,39 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
 
+  // Keep the devDependencies up-to-date
+    devUpdate: {
+        main: {
+            options: {
+                // Do not mention already updated dependencies
+                reportUpdated: false,
+                // Prompt asking if the dependency should be updated
+                updateType : "prompt"
+            }
+        }
+    },
+
+  // Lint the HTML using HTMLHint
+    htmlhint: {
+        html: {
+            options: {
+                "tag-pair": true,
+            },
+            src: ["index.html"]
+        }
+    },
+
+  // Lint the CSS using CSS Lint
+    csslint: {
+        strict: {
+            options: {
+                csslintrc: ".csslintrc",
+                "import": 2
+            },
+            src: "css/style.css",
+        }
+    },
+
     // Minify any CSS
     cssmin: {
       add_banner: {
@@ -10,7 +43,7 @@ module.exports = function (grunt) {
           banner: "/* Created 2013-2014 Triangle717 & rioforce, licensed under The MIT License */"
         },
         files: {
-          "css/stylesheet.min.css": ["css/stylesheet.css"]
+          "css/<%= pkg.name %>.min.css": ["css/style.css"]
         }
       }
     },
@@ -27,16 +60,27 @@ module.exports = function (grunt) {
 
     // Watched files to trigger grunt
     watch: {
-      files: ["index.html", "css/stylesheet.css", "<%= jshint.files %>"],
+      files: ["index.html", "css/style.css", "<%= jshint.files %>"],
       tasks: ["default"]
     }
   });
 
-  // Load any plugins
-  grunt.loadNpmTasks("grunt-contrib-jshint");
-  grunt.loadNpmTasks("grunt-contrib-cssmin");
-  grunt.loadNpmTasks("grunt-contrib-watch");
+  // Load all the plugins required to perform our tasks
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  // Define our tasks.
-  grunt.registerTask("default", ["cssmin", "jshint"]);
+  grunt.registerTask('default', 'List commands', function () {
+        grunt.log.writeln("");
+        grunt.log.writeln('Run "grunt lint" to lint the source files');
+        grunt.log.writeln('Run "grunt build" to minify the source files');
+        grunt.log.writeln('Run "grunt devUpdate" to update the devDependencies');
+        grunt.log.writeln('Run "grunt all" to run all tasks except "devUpdate"');
+    });
+
+    // Define the tasks
+    grunt.registerTask("lint", ["htmlhint", "csslint", "jshint"]);
+    grunt.registerTask("build", ["cssmin"]);
+    grunt.registerTask("all", ["lint", "build"]);
+
+    // Always use --force to stop csslint from killing the task
+    grunt.option("force", true);
 };

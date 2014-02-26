@@ -1,6 +1,6 @@
 {
   "name": "LUN-Patcher",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "News widget for LEGO Universe News! Forums",
   "main": "index.html",
   "scripts": {
@@ -27,11 +27,12 @@
   "homepage": "http://legouniversenews.forummotion.com/",
   "devDependencies": {
     "grunt": "~0.4.2",
+    "matchdep": "~0.3.0",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-cssmin": "~0.7.0",
-    "grunt-dev-update": "~0.4.5",
-    "matchdep": "~0.3.0",
+    "grunt-contrib-cssmin": "^0.8.0",
+    "grunt-contrib-csslint": "~0.2.0",
+    "grunt-dev-update": "^0.4.6",
     "grunt-htmlhint": "~0.4.0"
   }
 }
