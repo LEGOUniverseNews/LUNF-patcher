@@ -1,103 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-    <!-- For IE 9 and lower, redirect to the previous Patcher version -->
-    <!--[if lte (IE 9)]>
-        <meta http-equiv="Refresh" content="0.1; URL=http://legouniversenews.github.io/LUN-Patcher/Legacy/site/index.html">
-    <![endif]-->
-    <title>LEGO Universe News! Patcher</title>
-    <!--
-        LEGO Universe News! Patcher
+  <!-- For IE 9 and lower, redirect to the previous Patcher version -->
+  <!--[if lte (IE 9)]>
+      <meta http-equiv="Refresh" content="0.1; URL=http://legouniversenews.github.io/LUN-Patcher/Legacy/site/index.html">
+  <![endif]-->
+  <title>LEGO Universe News! Patcher</title>
+  <!--
+      LEGO Universe News! Patcher
 
-        Created 2013-2014 Triangle717 & rioforce
-        <http://Triangle717.WordPress.com/>
-        <http://rioforce.WordPress.com/>
+      Created 2013-2014 Triangle717 & rioforce
+      <http://Triangle717.WordPress.com/>
+      <http://rioforce.WordPress.com/>
 
-        Licensed under The MIT License
-        <http://opensource.org/licenses/MIT/>
-    -->
-    <!-- Open all links in new tabs -->
-    <base target="_blank">
+      Licensed under The MIT License
+      <http://opensource.org/licenses/MIT/>
+  -->
+  <!-- Open all links in new tabs unless overwritten -->
+  <base target="_blank">
 
-    <style type="text/css">
-        html { position: relative; }
-        body { position: relative; background-color: transparent; }
-        /* Hide all default link decoration */
-        a { text-decoration: none; }
-        /* Remove border around the YouTube player */
-        iframe { border: none; }
-        /* Gradient blank background */
-        #background {
-            position: relative;
-            left: 1.563em;
-            top: 2.875em;
-            width: 46.523em;
-            min-height: 19.063em;
-            max-height: 19.063em;
-            box-shadow: 0px 0px 5px 2px #9d6969;
-            background: linear-gradient(#252525, #000000);
-            background: -webkit-linear-gradient(#252525, #000000);
-            border-radius: 2.188em;
-        }
-    </style>
+  <style>
+      html { position: relative; }
+      body { position: relative; background-color: transparent; }
+      /* Hide all default link decoration */
+      a { text-decoration: none; }
+      /* Remove border around the YouTube player */
+      iframe { border: none; }
+      /* Gradient blank background */
+      #background {
+          position: relative;
+          left: 1.563em;
+          top: 2.875em;
+          width: 46.523em;
+          min-height: 19.063em;
+          max-height: 19.063em;
+          box-shadow: 0px 0px 5px 2px #9d6969;
+          background: linear-gradient(#252525, #000000);
+          background: -webkit-linear-gradient(#252525, #000000);
+          border-radius: 2.188em;
+      }
+  </style>
 
-    <!-- Pull in  the Nunito font and our own CSS -->
-    <link href="http://fonts.googleapis.com/css?family=Nunito:400" rel="stylesheet" type="text/css">
-    <link href="css/LUN-Patcher.min.css" rel="stylesheet" type="text/css">
-    <link href="css/perfect-scrollbar-0.4.8.min.css" rel="stylesheet" type="text/css">
-
+  <!-- Pull in  the Nunito font and our own CSS -->
+  <link href="http://fonts.googleapis.com/css?family=Nunito:400" rel="stylesheet">
+  <link href="css/LUN-Patcher.min.css" rel="stylesheet">
+  <link href="css/perfect-scrollbar-0.4.8.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- CSS background shape -->
-    <div id="background"></div>
+  <!-- CSS background shape -->
+  <div id="background"></div>
 
-    <!-- YouTube embed player. See js/script.js for details. -->
-    <div id="video-div">
-        <img id="video-loading" src="loader.gif"/>
-    </div>
+  <!-- YouTube embed player. See js/script.js for details. -->
+  <div id="video-div">
+      <img id="video-loading" src="loader.gif"/>
+  </div>
 
-    <!-- LUN news feed, using the FeedEk jQuery addon
-    http://jquery-plugins.net/FeedEk/FeedEk.html -->
-    <div id="news-feed">
-        <div id="news-feed-content"></div>
-    </div>
+  <!-- LUN news feed, using the FeedEk jQuery addon
+  http://jquery-plugins.net/FeedEk/FeedEk.html -->
+  <div id="news-feed">
+      <div id="news-feed-content"></div>
+  </div>
 
-    <!-- LUN Logo -->
-    <a href="http://legouniversenews.wordpress.com/">
-        <img id="lun-logo" alt="LEGO Universe News!" width="83" src="img/lun.png" /></a>
+  <!-- LUN Logo -->
+  <a href="http://legouniversenews.wordpress.com/">
+      <img id="lun-logo" alt="LEGO Universe News!" width="83" src="img/lun.png" />
+  </a>
 
-    <!-- News Header -->
-    <span class="font" id="news-text">News from</span>
-    <span id="news-from-lun">LEGO Universe News</span>
+  <!-- News Header -->
+  <span class="font" id="news-text">News from</span>
+  <span id="news-from-lun">LEGO Universe News</span>
 
-    <div id="forum-buttons">
-        <!-- LUNF FAQ button -->
-        <a href="http://legouniversenews.forummotion.com/faq">
-            <div class="font text-buttons" id="faq-text">FAQ</div></a>
+  <div id="forum-buttons">
+      <!-- LUNF FAQ button -->
+      <a href="http://legouniversenews.forummotion.com/faq">
+          <div class="font text-buttons" id="faq-text">FAQ</div></a>
 
-        <!--  LUNF Rules button -->
-        <a href="http://legouniversenews.forummotion.com/t1-rules-as-of-1-1-13">
-            <div class="font text-buttons" id="rules-text">Rules</div></a>
+      <!--  LUNF Rules button -->
+      <a href="http://legouniversenews.forummotion.com/t1-rules-as-of-1-1-13">
+          <div class="font text-buttons" id="rules-text">Rules</div></a>
 
-        <!-- LUNF Staff Button -->
-        <a href="http://legouniversenews.forummotion.com/h8-staff-members/">
-             <div class="font text-buttons" id="staff-text">Staff</div></a>
-    </div>
+      <!-- LUNF Staff Button -->
+      <a href="http://legouniversenews.forummotion.com/h8-staff-members/">
+           <div class="font text-buttons" id="staff-text">Staff</div></a>
+  </div>
 
-    <!-- Pull in jQuery... -->
-    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+  <!-- Pull in jQuery... -->
+  <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
 
-    <!-- Now jquery.mousewheel and perfect-scrollbar... -->
-    <script src="js/jquery.mousewheel-min.js"></script>
-    <script src="js/perfect-scrollbar-0.4.8.with-mousewheel.min.js"></script>
+  <!-- Now perfect-scrollbar... -->
+  <script src="js/perfect-scrollbar-0.4.8.with-mousewheel.min.js"></script>
 
-    <!-- Finally, load FeedEk and the patcher's code
-        http://css-tricks.com/thinking-async/ -->
-    <script src="js/FeedEk.min.js"></script>
-    <script src="js/script.js"></script>
+  <!-- Finally, load FeedEk and the patcher's code -->
+  <script src="js/FeedEk.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
