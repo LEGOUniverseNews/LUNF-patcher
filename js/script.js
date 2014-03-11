@@ -78,10 +78,10 @@ $(document).ready(function() {
   // RSS feed of posts on LUN
   $("#news-feed-content").FeedEk({
     FeedUrl: "http://legouniversenews.wordpress.com/feed/",
-    MaxCount: 5,
+    MaxCount: 7,
     ShowDesc: true,
     ShowPubDate: false,
-    DescCharacterLimit: 155,
+    DescCharacterLimit: 170,
     TitleLinkTarget: "_blank"
   });
 
