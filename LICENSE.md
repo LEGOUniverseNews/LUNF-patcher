@@ -1,7 +1,11 @@
 LEGO Universe News Fourms! Patcher
+
 Created 2013-2014 Triangle717 & rioforce
-<http://Triangle717.WordPress.com/>
-<http://rioforce.WordPress.com/>
+
+[http://Triangle717.WordPress.com](http://Triangle717.WordPress.com)
+
+
+[http://rioforce.WordPress.com](http://rioforce.WordPress.com/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

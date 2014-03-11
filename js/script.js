@@ -48,6 +48,7 @@ $(document).ready(function() {
   // and select a video at random
   if (!ytVideoId) {
     $.getJSON(apiString, function(data) {
+
       // Get a random video
       video = data.data.items[randomVideoIndex].video;
 
