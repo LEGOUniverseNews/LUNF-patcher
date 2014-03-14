@@ -6,5 +6,5 @@
   "compatible-vendor-prefixes": false,
   "box-model": false,
   "important": false,
-  "fallbback-colors": false
+  "fallback-colors": false
 }
