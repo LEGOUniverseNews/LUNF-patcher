@@ -17,8 +17,8 @@ The **_LEGO Universe News!_ Patcher** makes use of features in these fine open-s
 * [Grunt.js](http://gruntjs.com/)
 * [jQuery](https://jquery.com/)
 * [FeedEk jQuery RSS/ATOM Feed Plugin](https://github.com/enginkizil/FeedEk#readme)
-* [jQuery Mouse Wheel Plugin](https://github.com/brandonaaron/jquery-mousewheel#readme)
 * [perfect-scrollbar](https://github.com/noraesae/perfect-scrollbar#readme)
+* [String::format](https://github.com/davidchambers/string-format/)
 
 ## Contributing ##
 
