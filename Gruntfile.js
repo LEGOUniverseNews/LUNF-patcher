@@ -14,7 +14,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
     // Copy dependencies to the proper location
     copy: {
       main: {

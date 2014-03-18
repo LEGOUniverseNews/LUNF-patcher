@@ -105,17 +105,23 @@
   bottom: 0.063em;
   width: 0.063em;
   height: 0;
-  font-size: 1.438em;
+  font-size: 1.25em;
 }
 
 /* LUNF FAQ link */
 #faq-text { left: 425px; }
 
 /* LUNF Rules link */
-#rules-text { left: 540px; }
+#rules-text { left: 485px; }
 
 /* LUNF Staff Members page link */
-#staff-text { left: 680px; }
+#staff-text { left: 555px; }
+
+/* LUN Minifig Wizard image */
+#wizard-text {
+  left: 610px;
+  top: -3px;
+}
 
 /* -------- perfect-scrollbar Styling -------- */
 
