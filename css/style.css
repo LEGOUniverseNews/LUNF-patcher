@@ -131,7 +131,7 @@
 }
 
 /* Hide the scrollbar rail */
-.ps-scrollbar-y-rail { background-color: rgba(000,000,000,000) !important; }
+.ps-scrollbar-y-rail { background-color: rgba(0, 0, 0, 0) !important; }
 
 /* -------- RSS Feed Styling -------- */
 

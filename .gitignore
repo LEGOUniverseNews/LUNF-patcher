@@ -1,8 +1,8 @@
 *.tmp
 *.bak
 images/backup/*
+js/FeedEk.js
 Testing/*
-js/*.js
 
 #############
 ## Windows
