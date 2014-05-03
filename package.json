@@ -26,7 +26,8 @@
   },
   "homepage": "http://legouniversenews.forummotion.com/",
   "dependencies": {
-    "string-format": ">=0.2.1"
+    "string-format": ">=0.2.1",
+    "perfect-scrollbar": "git://github.com/noraesae/perfect-scrollbar.git"
   },
   "devDependencies": {
     "grunt": ">=0.4.3",
