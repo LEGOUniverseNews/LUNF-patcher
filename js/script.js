@@ -80,7 +80,7 @@ $(document).ready(function() {
   $(function() {
     // Activate perfect-scrollbar
     $("#news-feed").perfectScrollbar({
-      wheelSpeed: 2,
+      wheelSpeed: 3,
       suppressScrollX: true
     });
 
