@@ -26,12 +26,12 @@ $(document).ready(function() {
 
     // **** ADD PLAYLIST URL HERE ****
     // YouTube playlist id, i.e. the "list" parameter in regular YouTube queries.
-    playlistID = "PLRNbTEZ7dhL0YUbPnyocFfAfTbq-J9meV",
+    playlistID = "PLRNbTEZ7dhL2zevm9nuPeLBlBEjr1fyzv",
     apiBaseUrl = "https://gdata.youtube.com/feeds/api/playlists/",
 
     // Higher numbers will lead to bigger requests, but more varied videos.
     // Needs to be under 50 to comply with YouTube Data API limitations.
-    videoRequestCount = 10,
+    videoRequestCount = 15,
 
     randomVideoIndex = Math.floor((Math.random() * videoRequestCount)),
     queryString = "?v=2&alt=jsonc&max-results={0}".format(videoRequestCount);
