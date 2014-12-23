@@ -89,9 +89,9 @@ iframe { border: none; }
 #news-feed {
   position: absolute;
   width: 19em;
-  height: 12em;
+  height: 12.8em;
   padding-right: 0.5em;
-  left: 27em;
+  left: 27.4em;
   top: 5.625em;
   color: #fff;
   overflow: hidden;
@@ -118,7 +118,7 @@ iframe { border: none; }
 /* Post title */
 .post-title {
   position: relative;
-  top: 0.375em;
+  top: 0.1em;
   font-size: 0.9em;
   color: #C6C6C6;
 }
@@ -126,7 +126,7 @@ iframe { border: none; }
 
 /* Post summary */
 .post-summary {
-  font-size: 0.8em;
+  font-size: 0.7em;
   margin-top: 0.5em;
 }
 
