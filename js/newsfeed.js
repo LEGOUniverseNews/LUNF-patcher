@@ -28,16 +28,24 @@
 
   /**
    * Create a blog post summary.
+   * @returns {Boolean} true.
    */
   BlogPost.prototype.summarize = function() {
     // Strip HTML tags except for whitelisted ones
-    var tagsRegEx = new RegExp(/<(?!\/?(?:p|div)).+?>/gi);
-    this.summary = this.summary.replace(tagsRegEx, "");
-    this.title = this.title.replace(tagsRegEx, "");
+    var tagsRe   = /<(?!\/?(?:p|div)).+?>/gi;
+    this.summary = this.summary.replace(tagsRe, "");
+    this.title   = this.title.replace(tagsRe, "");
 
-    // Display only the first short bit of the content
-    // TODO Do not let leftover HTML tags effect this
-    this.summary = this.summary.slice(0, this.charLimit) + "...";
+    // Get the index of the last whole word
+    var charLimit = this.charLimit;
+    if (this.summary.charAt(charLimit) !== " ") {
+      while (this.summary.charAt(charLimit) !== " ") {
+        charLimit += 1;
+      }
+    }
+
+    // Display only the first bit of the news
+    this.summary = this.summary.substr(0, charLimit) + "...";
     return true;
   };
 
