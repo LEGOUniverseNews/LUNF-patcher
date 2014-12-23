@@ -63,7 +63,7 @@ module.exports = function (grunt) {
     cssmin: {
       add_banner: {
         options: {
-          banner: "/* Created 2013-2014 Triangle717 & rioforce, licensed under The MIT License */"
+          banner: "/* 2013-2014 Triangle717 & rioforce | The MIT License */"
         },
         files: {
           "css/<%= pkg.name %>.min.css": ["css/style.css"]

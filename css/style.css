@@ -7,7 +7,34 @@
  *
  * Licensed under The MIT License
  * <http://opensource.org/licenses/MIT>
-*/
+ */
+
+html { position: relative; }
+
+body {
+  font-family: "Nunito", Arial, sans-serif;
+  font-weight: 400;
+  color: #e6dede;
+  position: relative;
+  background-color: transparent;
+}
+
+a { text-decoration: none; }
+iframe { border: none; }
+
+/* Gradient black background */
+#background {
+  position: relative;
+  left: 1.563em;
+  top: 2.875em;
+  width: 46.523em;
+  min-height: 19.063em;
+  max-height: 19.063em;
+  box-shadow: 0 0 5px 2px #9d6969;
+  background: -webkit-linear-gradient(#252525, #000000);
+  background:         linear-gradient(#252525, #000000);
+  border-radius: 2.188em;
+}
 
 /* LUN Logo at the top */
 #lun-logo {
@@ -90,13 +117,6 @@
   font-family: Impact, "Nunito", sans-serif;
   color: #e6dede;
   font-size: 1.25em;
-}
-
-/* General settings for all text */
-.font {
-  font-family: "Nunito", Arial, sans-serif;
-  font-weight: 400;
-  color: #e6dede;
 }
 
 /* Align the main text buttons correctly */
