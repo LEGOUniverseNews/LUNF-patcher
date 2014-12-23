@@ -73,7 +73,7 @@ module.exports = function (grunt) {
 
     // Lint check any JavaScript
     jshint: {
-      files: ["package.json", "Gruntfile.js", "js/script.js"],
+      files: ["js/*.js"],
       options: {
         globals: {
           jQuery: true
@@ -84,7 +84,7 @@ module.exports = function (grunt) {
     // Watched files to trigger grunt
     watch: {
       files: ["index.html", "css/style.css", "<%= jshint.files %>"],
-      tasks: ["default"]
+      tasks: ["all"]
     }
   });
 
