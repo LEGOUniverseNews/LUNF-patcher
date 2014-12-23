@@ -33,10 +33,11 @@
     // Strip HTML tags except for whitelisted ones
     var tagsRegEx = new RegExp(/<(?!\/?(?:p|div)).+?>/gi);
     this.summary = this.summary.replace(tagsRegEx, "");
+    this.title = this.title.replace(tagsRegEx, "");
 
     // Display only the first short bit of the content
     // TODO Do not let leftover HTML tags effect this
-    this.summary = this.summary.slice(0, this.charLimit);
+    this.summary = this.summary.slice(0, this.charLimit) + "...";
     return true;
   };
 
@@ -65,7 +66,8 @@
 
     error: function() {
       var message = "<p>Uh-oh, the news could not be loaded! Please try again in a few minutes. " +
-          "In the meantime, you can visit <a style='color: #CEC2C2;' href='https://legouniversenews.wordpress.com' target='_blank'>LUN</a> directly.</p>";
+          "In the meantime, you can visit " +
+          "<a style='color: #CEC2C2;' href='https://legouniversenews.wordpress.com' target='_blank'>LUN</a> directly.</p>";
       $("#news-feed").html(message);
     }
   });
