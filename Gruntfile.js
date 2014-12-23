@@ -15,25 +15,36 @@ module.exports = function (grunt) {
       }
     },
 
-    // Copy dependencies to the proper location
     copy: {
       main: {
-        expand: true,
-        cwd: "node_modules/",
-        src: ["string-format/lib/*"],
-        dest: "js/",
-        flatten: true,
-        filter: "isFile"
-      },
-    },
+        files: [
+          {
+            expand: true,
+            cwd: "node_modules/",
+            src: "string-format/lib/*",
+            dest: "lib/",
+            flatten: true,
+            filter: "isFile"
+          },
+          {
+            expand: true,
+            flatten: true,
+            cwd: "node_modules/",
+            src: ["perfect-scrollbar/min/perfect-scrollbar.min.css",
+                  "perfect-scrollbar/min/perfect-scrollbar.min.js"],
+            dest: "lib/",
+          },
+        ]
+          }
+          },
 
-    // Lint the HTML using HTMLHint
-    htmlhint: {
-      html: {
-        options: {
+          // Lint the HTML using HTMLHint
+          htmlhint: {
+          html: {
+          options: {
           "tag-pair": true,
-        },
-        src: ["index.html"]
+          },
+          src: ["index.html"]
       }
     },
 
