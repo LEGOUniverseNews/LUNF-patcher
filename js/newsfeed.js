@@ -61,7 +61,13 @@
         newsPost.summarize();
         posts.push(newsPost);
       });
-    }, displayNews]
+    }, displayNews],
+
+    error: function() {
+      var message = "<p>Uh-oh, the news could not be loaded! Please try again in a few minutes. " +
+          "In the meantime, you can visit <a style='color: #CEC2C2;' href='https://legouniversenews.wordpress.com' target='_blank'>LUN</a> directly.</p>";
+      $("#news-feed").html(message);
+    }
   });
 
 
@@ -76,7 +82,7 @@
       $(value.selector).append("<a class='post-url post-title' target='_blank' href='#'></a>");
       $(value.selector).append("<div class='post-summary'></div>");
       $(value.selector + " .post-title").html(value.title);
-      $(value.selector + " .post-url").attr("href", value.address);
+      $(value.selector + " .post-url").attr("href", value.url);
       $(value.selector + " .post-summary").html(value.summary);
     });
     return true;
