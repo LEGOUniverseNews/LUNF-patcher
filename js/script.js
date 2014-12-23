@@ -84,21 +84,8 @@ $(document).ready(function() {
       suppressScrollX: true
     });
 
-    // RSS feed of posts on LUN
-    $("#news-feed-content").FeedEk({
-      FeedUrl: "http://legouniversenews.wordpress.com/feed/",
-      MaxCount: 7,
-      ShowDesc: true,
-      ShowPubDate: false,
-      DescCharacterLimit: 170,
-      TitleLinkTarget: "_blank"
-    });
-
-    // Adjust the CSS to align the feed
-    $("#news-feed-content").css("right", "0.938em");
-
     // Update the scrollbar so it does not change sizes on us
-    // FIXME Why won't this work?
+    // TODO Why won't this work?
     $("#news-feed").perfectScrollbar("update");
   });
 });
