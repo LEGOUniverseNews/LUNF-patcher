@@ -29,7 +29,7 @@ module.exports = function (grunt) {
             cwd: "node_modules/",
             src: ["perfect-scrollbar/min/perfect-scrollbar.min.css",
                   "perfect-scrollbar/min/perfect-scrollbar.min.js"],
-            dest: "lib/",
+            dest: "lib/"
           },
         ]
       }
