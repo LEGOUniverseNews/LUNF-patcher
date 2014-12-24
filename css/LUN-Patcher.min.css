@@ -1,4 +1,4 @@
-/* LUN-Patcher v2.1.0
+/* LUN-Patcher v2.2.0
  * http://legouniversenews.forummotion.com/
  * Created 2013-2014 Triangle717 and rioforce
  * Licensed under the The MIT License

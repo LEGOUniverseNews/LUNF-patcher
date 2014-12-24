@@ -91,7 +91,7 @@ module.exports = function (grunt) {
 
     // Watched files to trigger grunt
     watch: {
-      files: ["index.html", "css/style.css", "<%= jshint.files %>"],
+      files: ["package.json", "index.html", "css/style.css", "<%= jshint.files %>"],
       tasks: ["all"]
     }
   });
