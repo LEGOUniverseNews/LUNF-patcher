@@ -75,9 +75,9 @@
     }, displayNews],
 
     error: function() {
-      var message = "<p>Uh-oh, the news could not be loaded! Please try again in a few minutes. " +
-          "In the meantime, you can visit " +
-          "<a style='color: #CEC2C2;' href='https://legouniversenews.wordpress.com' target='_blank'>LUN</a> directly.</p>";
+      var message = "<p>The news feed could not be loaded. " +
+          "Please visit the <a style='color: #CEC2C2;' href='https://legouniversenews.wordpress.com' target='_blank'>" +
+          "LEGO Universe News!</a> blog directly.</p>";
       $("#news-feed").html(message);
     }
   });
