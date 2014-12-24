@@ -65,7 +65,7 @@
         console.log("Fetching news feed from LEGOUniverseNews.WordPress.com");
         data.posts.forEach(function(details) {
         // Create a unique post ID
-        var postID = "post-{0}".format(details.guid.substr(-4));
+        var postID = "post-" + details.guid.substr(-4);
 
         // Create the post object and store it
         var newsPost = new BlogPost(postID, details.title, details.short_URL, details.content);
