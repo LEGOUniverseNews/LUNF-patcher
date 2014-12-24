@@ -22,6 +22,8 @@
    * @constant
    * @type {Number}
    * The number of characters the summary should be limited to.
+   * This is a rough number and may increase in order
+   * to accommodate the rest of a word.
    */
   BlogPost.prototype.charLimit = 170;
 
@@ -31,7 +33,7 @@
    * @returns {Boolean} true.
    */
   BlogPost.prototype.summarize = function() {
-    // Strip HTML tags except for whitelisted ones
+    // Strip HTML tags except for white listed ones
     var tagsRe   = /<(?!\/?(?:p|div)).+?>/gi;
     this.summary = this.summary.replace(tagsRe, "");
     this.title   = this.title.replace(tagsRe, "");
