@@ -2,15 +2,20 @@ module.exports = function (grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
+    banner: "/* <%= pkg.name %> v<%= pkg.version %>\n" +
+    " * <%= pkg.homepage ? '' + pkg.homepage + '\\n' : '' %>" +
+    " * Created 2013-<%= grunt.template.today('yyyy') %> <%= pkg.author %>\n" +
+    " * Licensed under the <%= pkg.license %>\n */\n",
 
-    // Keep the devDependencies up-to-date
     devUpdate: {
       main: {
         options: {
-          // Do not mention already updated dependencies
           reportUpdated: false,
-          // Prompt asking if the dependency should be updated
-          updateType : "prompt"
+          updateType: "prompt",
+          packages: {
+            devDependencies: true,
+            dependencies: true
+          },
         }
       }
     },
@@ -30,7 +35,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Lint the HTML using HTMLHint
     htmlhint: {
       html: {
         options: {
@@ -40,7 +44,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Lint the CSS using CSS Lint
     csslint: {
       strict: {
         options: {
@@ -51,11 +54,10 @@ module.exports = function (grunt) {
       }
     },
 
-    // Minify any CSS
     cssmin: {
       add_banner: {
         options: {
-          banner: "/* 2013-2014 Triangle717 & rioforce | The MIT License */"
+          banner: "<%= banner %>"
         },
         files: {
           "css/<%= pkg.name %>.min.css": ["css/style.css"]
@@ -63,12 +65,26 @@ module.exports = function (grunt) {
       }
     },
 
-    // Lint check any JavaScript
     jshint: {
-      files: ["js/*.js"],
+      files: ["js/*.js", "!js/*.min.js"],
       options: {
         globals: {
           jQuery: true
+        }
+      }
+    },
+
+    uglify: {
+      options: {
+        banner: "<%= banner %>",
+        compress: true,
+        mangle: true,
+        report: "min",
+        sourceMap: false
+      },
+      my_target: {
+        files: {
+          "js/newsfeed.min.js": "js/newsfeed.js"
         }
       }
     },
@@ -93,7 +109,7 @@ module.exports = function (grunt) {
 
   // Define the tasks
   grunt.registerTask("lint", ["htmlhint", "csslint", "jshint"]);
-  grunt.registerTask("build", ["cssmin", "copy"]);
+  grunt.registerTask("build", ["cssmin", "uglify", "copy"]);
   grunt.registerTask("all", ["lint", "build"]);
 
   // Always use --force to stop csslint from killing the task

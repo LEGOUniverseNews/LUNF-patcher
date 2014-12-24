@@ -12,7 +12,7 @@ The news feed pulls from [_LEGO Universe News!_](http://legouniversenews.wordpre
 ## Dependencies ##
 The **_LEGO Universe News!_ Patcher** makes use of features in these fine open-source projects:
 
-* [Grunt.js](http://gruntjs.com/)
+* [Grunt](http://gruntjs.com/)
 * [jQuery](https://jquery.com/)
 * [perfect-scrollbar](https://github.com/noraesae/perfect-scrollbar#readme)
 
