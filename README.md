@@ -1,5 +1,4 @@
-# _LEGO Universe News!_ Patcher #
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+# _LEGO Universe News!_ Patcher [![Build Status](https://travis-ci.org/LEGOUniverseNews/LUN-Patcher.svg)](https://travis-ci.org/LEGOUniverseNews/LUN-Patcher) #
 
 This is a "patcher" (actually a news widget) designed for the [_LEGO Universe News!_ Forums](http://legouniversenews.forummotion.com/).
 It is designed to imitate one of the later patchers from the now-closed MMOG [LEGO&reg; Universe](http://universe.lego.com/en-us/default.aspx),
