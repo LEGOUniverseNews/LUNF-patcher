@@ -7,7 +7,37 @@
  *
  * Licensed under The MIT License
  * <http://opensource.org/licenses/MIT>
-*/
+ */
+
+html { position: relative; }
+
+body {
+  font-family: "Nunito", Arial, sans-serif;
+  font-weight: 400;
+  color: #e6dede;
+  position: relative;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: #e6dede;
+}
+
+iframe { border: none; }
+
+/* Gradient black background */
+#background {
+  position: relative;
+  left: 1.563em;
+  top: 2.875em;
+  width: 46.523em;
+  height: 19em;
+  box-shadow: 0 0 5px 2px #9d6969;
+  background: -webkit-linear-gradient(#252525, #000000);
+  background:         linear-gradient(#252525, #000000);
+  border-radius: 2.188em;
+}
 
 /* LUN Logo at the top */
 #lun-logo {
@@ -58,20 +88,13 @@
 /* Size of RSS feed container from LUN */
 #news-feed {
   position: absolute;
-  width: 20.938em;
-  height: 12.813em;
-  left: 25.875em;
+  width: 19em;
+  height: 12.8em;
+  padding-right: 0.5em;
+  left: 27.4em;
   top: 5.625em;
-  color: #e6dede;
+  color: #fff;
   overflow: hidden;
-}
-
-/* Location of feed on the background */
-#news-feed-content {
-  position: absolute;
-  width: 20.938em;
-  height: 25.000em;
-  right: -1em;
 }
 
 /* "News from" label */
@@ -92,12 +115,21 @@
   font-size: 1.25em;
 }
 
-/* General settings for all text */
-.font {
-  font-family: "Nunito", Arial, sans-serif;
-  font-weight: 400;
-  color: #e6dede;
+/* Post title */
+.post-title {
+  position: relative;
+  top: 0.1em;
+  font-size: 0.9em;
+  color: #C6C6C6;
 }
+.post-title:hover { text-decoration: underline; }
+
+/* Post summary */
+.post-summary {
+  font-size: 0.7em;
+  margin-top: 0.5em;
+}
+
 
 /* Align the main text buttons correctly */
 .text-buttons {
@@ -123,47 +155,10 @@
   top: -3px;
 }
 
-/* -------- perfect-scrollbar Styling -------- */
-
 .ps-scrollbar-y {
-  background-color: #B3B3B3 !important;
+  background-color: #B3B3B3;
   width: 9px !important;
 }
 
 /* Hide the scrollbar rail */
 .ps-scrollbar-y-rail { background-color: rgba(0, 0, 0, 0) !important; }
-
-/* -------- RSS Feed Styling -------- */
-
-/* Resize header font */
-.itemTitle {
-  position: relative;
-  top: 0.375em;
-  padding-bottom: 5px;
-}
-
-/* Align the list */
-.feedEkList li {
-  position: relative;
-  list-style: none;
-  top: -1.313em;
-}
-
-/* Change the size and color of header */
-.itemTitle a {
-  font-size: 0.9em;
-  color: #C6C6C6;
-}
-
-/* Use our favorite fonts */
-.itemTitle a,
-.itemContent { font-family: "Nunito", Arial, sans-serif; }
-
-/* Display underline on hover to denote a link */
-.itemTitle a:hover { text-decoration: underline; }
-
-/* Change the size and color of the paragraph */
-.itemContent {
-  font-size: 0.7em;
-  color: white;
-}

@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+  <title>LEGO Universe News! Patcher</title>
   <!-- For IE 9 and lower, redirect to the previous Patcher version -->
   <!--[if lte (IE 9)]>
-      <meta http-equiv="Refresh" content="0.1; URL=http://legouniversenews.github.io/LUN-Patcher/Legacy/site/index.html">
+      <meta http-equiv="refresh" content="0.1; URL=http://legouniversenews.github.io/LUN-Patcher/Legacy/site/index.html">
   <![endif]-->
-  <title>LEGO Universe News! Patcher</title>
   <!--
       LEGO Universe News! Patcher
 
@@ -19,97 +18,42 @@
       Licensed under The MIT License
       <http://opensource.org/licenses/MIT/>
   -->
-
-  <style>
-      html { position: relative; }
-      body { position: relative; background-color: transparent; }
-      /* Hide all default link decoration */
-      a { text-decoration: none; }
-      /* Remove border around the YouTube player */
-      iframe { border: none; }
-      /* Gradient blank background */
-      #background {
-        position: relative;
-        left: 1.563em;
-        top: 2.875em;
-        width: 46.523em;
-        min-height: 19.063em;
-        max-height: 19.063em;
-        box-shadow: 0px 0px 5px 2px #9d6969;
-        background: -webkit-linear-gradient(#252525, #000000);
-        background:         linear-gradient(#252525, #000000);
-        border-radius: 2.188em;
-      }
-  </style>
-
-  <!-- Pull in  the Nunito font and our own CSS -->
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nunito:400">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Nunito:400">
+  <link rel="stylesheet" href="lib/perfect-scrollbar.min.css">
   <link rel="stylesheet" href="css/LUN-Patcher.min.css">
-  <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
 </head>
 
 <body>
-  <!-- CSS background shape -->
   <div id="background"></div>
-
-  <!-- YouTube embed player. See js/script.js for details. -->
   <div id="video-div">
-    <img id="video-loading" alt="Loader" src="loader.gif"/>
+    <img id="video-loading" alt="Loader" src="loader.gif">
   </div>
 
-  <!--
-    LUN blog feed, using custom FeedEk jQuery addon
-    http://jquery-plugins.net/FeedEk/FeedEk.html
-    https://github.com/le717/FeedEk
-  -->
-  <div id="news-feed">
-    <div id="news-feed-content"></div>
-  </div>
-
-  <!-- LUN Logo -->
+  <div id="news-feed"></div>
   <a target="_blank" href="http://legouniversenews.wordpress.com/">
-    <img id="lun-logo" alt="LEGO Universe News!" width="83" src="img/lun.png" />
+    <img id="lun-logo" alt="LEGO Universe News!" width="83" src="img/lun.png">
   </a>
 
-  <!-- News Header -->
-  <span class="font" id="news-text">News from</span>
+  <span id="news-text">News from</span>
   <span id="news-from-lun">LEGO Universe News</span>
 
   <div id="forum-buttons">
-    <!-- LUNF FAQ button -->
     <a target="_blank" href="http://legouniversenews.forummotion.com/faq">
-      <div class="font text-buttons" id="faq-text">FAQ</div></a>
+      <div class="text-buttons" id="faq-text">FAQ</div></a>
 
-    <!--  LUNF Rules button -->
     <a target="_blank" href="http://legouniversenews.forummotion.com/t1-rules-as-of-1-1-13">
-      <div class="font text-buttons" id="rules-text">Rules</div></a>
+      <div class="text-buttons" id="rules-text">Rules</div></a>
 
-    <!-- LUNF Staff Button -->
     <a target="_blank"  href="http://legouniversenews.forummotion.com/h8-staff-members/">
-      <div class="font text-buttons" id="staff-text">Staff</div></a>
+      <div class="text-buttons" id="staff-text">Staff</div></a>
 
-  <!-- LUN Minifig Wizard Button -->
     <a target="_blank" href="http://bit.ly/MinifigWizard">
-      <div class="font text-buttons" id="wizard-text"><img alt="LUN Minifig Wizard" src="img/Minifig-Wizard.png" /></div></a>
+      <div class="text-buttons" id="wizard-text"><img alt="LUN Minifig Wizard" src="img/Minifig-Wizard.png"></div></a>
   </div>
 
-  <!-- Pull in jQuery -->
-  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-
-  <!--
-    String::format
-    https://github.com/davidchambers/string-format
-  -->
-  <script src="js/string-format.js"></script>
-
-  <!--
-    perfect-scrollbar
-    http://noraesae.github.io/perfect-scrollbar
-  -->
-  <script src="js/perfect-scrollbar-mousewheel.min.js"></script>
-
-  <!-- Finally, load FeedEk and the patcher's code -->
-  <script src="js/FeedEk.min.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="lib/perfect-scrollbar.min.js"></script>
+  <script src="js/newsfeed.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

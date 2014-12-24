@@ -34,17 +34,17 @@ $(document).ready(function() {
     videoRequestCount = 15,
 
     randomVideoIndex = Math.floor((Math.random() * videoRequestCount)),
-    queryString = "?v=2&alt=jsonc&max-results={0}".format(videoRequestCount);
+    queryString = "?v=2&alt=jsonc&max-results=" + videoRequestCount;
 
   // This is the string we are sending to the YouTube Data API
-  var apiString = "{0}{1}{2}".format(apiBaseUrl, playlistID, queryString);
+  var apiString = apiBaseUrl + playlistID + queryString;
 
   var video = null,
       $videoDiv = $("#video-div");
 
   // If the video ID is null or undefined, we use a playlis and select a video at random
   if (!ytVideoID) {
-    console.log("Fetching YouTube data from: {0}".format(apiString));
+    console.log("Fetching YouTube data from: " + apiString);
 
     $.getJSON(apiString, function(data) {
       // Get a random video
@@ -52,10 +52,10 @@ $(document).ready(function() {
 
       // Assign the YouTube embed code after we select a video
       $videoDiv.html('<iframe id="yt-video" allowfullscreen></iframe>');
-      console.log("Current video is {0}{1}{2}".format(ytDomain, video.id, ytVideoParams));
+      console.log("Current video is " + ytDomain + video.id + ytVideoParams);
 
       // Setting the source using jQuery does not work for some reason
-      document.querySelector("#yt-video").src = "{0}{1}{2}".format(ytDomain + video.id, ytVideoParams);
+      document.querySelector("#yt-video").src = ytDomain + video.id + ytVideoParams;
     });
 
   // Use a specific ID instead of selecting one from a playlist instead
@@ -65,40 +65,27 @@ $(document).ready(function() {
     video = "Error buster!";
 
     $videoDiv.html('<iframe id="yt-video" allowfullscreen></iframe>');
-    console.log("Fetching YouTube video from: {0}{1}{2}".format(ytDomain, ytVideoID, ytVideoParams));
+    console.log("Fetching YouTube video from: " + ytDomain + ytVideoID + ytVideoParams);
 
     // Setting the source using jQuery does not work for some reason
-    document.querySelector("#yt-video").src = "{0}{1}{2}".format(ytDomain, ytVideoID, ytVideoParams);
+    document.querySelector("#yt-video").src = ytDomain + ytVideoID + ytVideoParams;
   }
 
   // Neither the playlist nor the video loaded
   if (video === null) {
     // Display an error message instead of the YouTube iframe
-    $videoDiv.html('<img id="video-error" alt="Video error" src="img/video-error.png" />');
+    $videoDiv.html('<img id="video-error" alt="Video error" src="img/video-error.png">');
   }
 
   $(function() {
     // Activate perfect-scrollbar
     $("#news-feed").perfectScrollbar({
-      wheelSpeed: 3,
+      wheelSpeed: 1,
       suppressScrollX: true
     });
 
-    // RSS feed of posts on LUN
-    $("#news-feed-content").FeedEk({
-      FeedUrl: "http://legouniversenews.wordpress.com/feed/",
-      MaxCount: 7,
-      ShowDesc: true,
-      ShowPubDate: false,
-      DescCharacterLimit: 170,
-      TitleLinkTarget: "_blank"
-    });
-
-    // Adjust the CSS to align the feed
-    $("#news-feed-content").css("right", "0.938em");
-
     // Update the scrollbar so it does not change sizes on us
-    // FIXME Why won't this work?
+    // TODO Why won't this work?
     $("#news-feed").perfectScrollbar("update");
   });
 });

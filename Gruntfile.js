@@ -2,32 +2,39 @@ module.exports = function (grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
+    banner: "/* <%= pkg.name %> v<%= pkg.version %>\n" +
+    " * <%= pkg.homepage ? '' + pkg.homepage + '\\n' : '' %>" +
+    " * Created 2013-<%= grunt.template.today('yyyy') %> <%= pkg.author %>\n" +
+    " * Licensed under the <%= pkg.license %>\n */\n",
 
-    // Keep the devDependencies up-to-date
     devUpdate: {
       main: {
         options: {
-          // Do not mention already updated dependencies
           reportUpdated: false,
-          // Prompt asking if the dependency should be updated
-          updateType : "prompt"
+          updateType: "prompt",
+          packages: {
+            devDependencies: true,
+            dependencies: true
+          },
         }
       }
     },
 
-    // Copy dependencies to the proper location
     copy: {
       main: {
-        expand: true,
-        cwd: "node_modules/",
-        src: ["string-format/lib/*"],
-        dest: "js/",
-        flatten: true,
-        filter: "isFile"
-      },
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            cwd: "node_modules/",
+            src: ["perfect-scrollbar/min/perfect-scrollbar.min.css",
+                  "perfect-scrollbar/min/perfect-scrollbar.min.js"],
+            dest: "lib/"
+          },
+        ]
+      }
     },
 
-    // Lint the HTML using HTMLHint
     htmlhint: {
       html: {
         options: {
@@ -37,7 +44,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Lint the CSS using CSS Lint
     csslint: {
       strict: {
         options: {
@@ -48,11 +54,10 @@ module.exports = function (grunt) {
       }
     },
 
-    // Minify any CSS
     cssmin: {
       add_banner: {
         options: {
-          banner: "/* Created 2013-2014 Triangle717 & rioforce, licensed under The MIT License */"
+          banner: "<%= banner %>"
         },
         files: {
           "css/<%= pkg.name %>.min.css": ["css/style.css"]
@@ -60,9 +65,8 @@ module.exports = function (grunt) {
       }
     },
 
-    // Lint check any JavaScript
     jshint: {
-      files: ["package.json", "Gruntfile.js", "js/script.js"],
+      files: ["js/*.js", "!js/*.min.js"],
       options: {
         globals: {
           jQuery: true
@@ -70,10 +74,25 @@ module.exports = function (grunt) {
       }
     },
 
+    uglify: {
+      options: {
+        banner: "<%= banner %>",
+        compress: true,
+        mangle: true,
+        report: "min",
+        sourceMap: false
+      },
+      my_target: {
+        files: {
+          "js/newsfeed.min.js": "js/newsfeed.js"
+        }
+      }
+    },
+
     // Watched files to trigger grunt
     watch: {
       files: ["index.html", "css/style.css", "<%= jshint.files %>"],
-      tasks: ["default"]
+      tasks: ["all"]
     }
   });
 
@@ -90,7 +109,7 @@ module.exports = function (grunt) {
 
   // Define the tasks
   grunt.registerTask("lint", ["htmlhint", "csslint", "jshint"]);
-  grunt.registerTask("build", ["cssmin", "copy"]);
+  grunt.registerTask("build", ["cssmin", "uglify", "copy"]);
   grunt.registerTask("all", ["lint", "build"]);
 
   // Always use --force to stop csslint from killing the task
