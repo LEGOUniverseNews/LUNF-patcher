@@ -2,7 +2,7 @@
 /*
  * LEGO Universe News! Patcher
  *
- * Created 2013-2014 Triangle717 & rioforce
+ * Created 2013-2015 Triangle717 & rioforce
  * <http://Triangle717.WordPress.com/>
  * <http://rioforce.WordPress.com/>
  *
@@ -84,7 +84,7 @@ $(document).ready(function() {
       suppressScrollX: true
     });
 
-    // Update the scrollbar so it does not change sizes on us
+    // Update the scrollbar so it does not change size
     // TODO Why won't this work?
     $("#news-feed").perfectScrollbar("update");
   });
