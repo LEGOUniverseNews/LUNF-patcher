@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
-  // Project configuration.
+  "use strict";
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     banner: "/* <%= pkg.name %> v<%= pkg.version %>\n" +
@@ -15,7 +15,7 @@ module.exports = function (grunt) {
           packages: {
             devDependencies: true,
             dependencies: true
-          },
+          }
         }
       }
     },
@@ -30,7 +30,7 @@ module.exports = function (grunt) {
             src: ["perfect-scrollbar/min/perfect-scrollbar.min.css",
                   "perfect-scrollbar/min/perfect-scrollbar.min.js"],
             dest: "lib/"
-          },
+          }
         ]
       }
     },
@@ -38,7 +38,7 @@ module.exports = function (grunt) {
     htmlhint: {
       html: {
         options: {
-          "tag-pair": true,
+          "tag-pair": true
         },
         src: ["index.html"]
       }
@@ -50,7 +50,7 @@ module.exports = function (grunt) {
           csslintrc: ".csslintrc",
           "import": 2
         },
-        src: "css/style.css",
+        src: "css/style.css"
       }
     },
 
@@ -77,7 +77,9 @@ module.exports = function (grunt) {
     uglify: {
       options: {
         banner: "<%= banner %>",
-        compress: true,
+        compress: {
+          drop_console: true
+        },
         mangle: true,
         report: "min",
         sourceMap: false

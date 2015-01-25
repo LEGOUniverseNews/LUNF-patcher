@@ -1,5 +1,22 @@
-(function($){
+(function($) {
   "use strict";
+
+  /**
+   * Display post details.
+   * @returns {Boolean} true.
+   */
+  function displayNews() {
+    var $container = $("#news-feed");
+    posts.forEach(function(value, index) {
+      $container.append(value.container);
+      $(value.selector).append("<a class='post-url post-title' target='_blank' href='#'></a>");
+      $(value.selector).append("<div class='post-summary'></div>");
+      $(value.selector + " .post-title").html(value.title);
+      $(value.selector + " .post-url").attr("href", value.url);
+      $(value.selector + " .post-summary").html(value.summary);
+    });
+    return true;
+  }
 
   /**
    * @constructor
@@ -10,11 +27,12 @@
    * @param {String} summary Post summary.
    */
   function BlogPost(id, title, url, summary) {
+    this.id = "post-" + id.substr(-4);
     this.url = url;
     this.title = title;
     this.summary = summary;
-    this.selector = ".post-single#" + id;
-    this.container = '<div class="post-single" id="' + id + '"></div>';
+    this.selector = ".post-single#" + this.id;
+    this.container = '<div class="post-single" id="' + this.id + '"></div>';
   }
 
 
@@ -64,14 +82,12 @@
       function(data) {
         console.log("Fetching news feed from LEGOUniverseNews.WordPress.com");
         data.posts.forEach(function(details) {
-        // Create a unique post ID
-        var postID = "post-" + details.guid.substr(-4);
 
-        // Create the post object and store it
-        var newsPost = new BlogPost(postID, details.title, details.short_URL, details.content);
-        newsPost.summarize();
-        posts.push(newsPost);
-      });
+          // Create the post object
+          var newsPost = new BlogPost(details.guid, details.title, details.short_URL, details.content);
+          newsPost.summarize();
+          posts.push(newsPost);
+        });
     }, displayNews],
 
     error: function() {
@@ -81,22 +97,4 @@
       $("#news-feed").html(message);
     }
   });
-
-
-  /**
-   * Display post details.
-   * @returns {Boolean} true.
-   */
-  function displayNews() {
-    var $container = $("#news-feed");
-    posts.forEach(function(value, index) {
-      $container.append(value.container);
-      $(value.selector).append("<a class='post-url post-title' target='_blank' href='#'></a>");
-      $(value.selector).append("<div class='post-summary'></div>");
-      $(value.selector + " .post-title").html(value.title);
-      $(value.selector + " .post-url").attr("href", value.url);
-      $(value.selector + " .post-summary").html(value.summary);
-    });
-    return true;
-  }
 })(jQuery);
