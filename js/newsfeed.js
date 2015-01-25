@@ -12,24 +12,6 @@
 
 (function($) {
   "use strict";
-
-  /**
-   * Display post details.
-   * @returns {Boolean} true.
-   */
-  function displayNews() {
-    var $container = $("#news-feed");
-    posts.forEach(function(value) {
-      $container.append(value.container);
-      $(value.selector).append("<a class='post-url post-title' target='_blank' href='#'></a>");
-      $(value.selector).append("<div class='post-summary'></div>");
-      $(value.selector + " .post-title").html(value.title);
-      $(value.selector + " .post-url").attr("href", value.url);
-      $(value.selector + " .post-summary").html(value.summary);
-    });
-    return true;
-  }
-
   /**
    * @constructor
    * Create a blog post object.
@@ -86,6 +68,24 @@
   var posts    = [],
       postsNum = 6;
 
+  /**
+   * Display post details.
+   * @returns {Boolean} true.
+   */
+  function displayNews() {
+    var $container = $("#news-feed");
+    posts.forEach(function(value) {
+      $container.append(value.container);
+      $(value.selector).append("<a class='post-url post-title' target='_blank' href='#'></a>");
+      $(value.selector).append("<div class='post-summary'></div>");
+      $(value.selector + " .post-title").html(value.title);
+      $(value.selector + " .post-url").attr("href", value.url);
+      $(value.selector + " .post-summary").html(value.summary);
+    });
+    return true;
+  }
+
+
   // Poll the WordPress.com API
   $.ajax({
     dataType: "json",
@@ -101,6 +101,7 @@
           posts.push(newsPost);
         });
     }, displayNews],
+      }, displayNews],
 
     error: function() {
       var message = "<p>The news feed could not be loaded. " +
