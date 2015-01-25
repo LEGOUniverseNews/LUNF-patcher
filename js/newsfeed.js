@@ -50,10 +50,17 @@
     this.summary = this.summary.replace(tagsRe, "");
     this.title   = this.title.replace(tagsRe, "");
 
-    // Get the index of the last whole word
-    var charLimit = this.charLimit;
-    if (this.summary.charAt(charLimit) !== " ") {
-      while (this.summary.charAt(charLimit) !== " ") {
+    // This is a reblogged post, cut out the reblogged markup
+    if (/reblogged-content/.test(this.summary)) {
+      this.summary = this.summary.slice(this.summary.indexOf("reblogged-content") + 20);
+      this.summary.replace(/<\/div><p class="reblog-source">View original<\/p><\/div><\/div>/, "");
+    }
+
+    // Get the index of the nearest punctuation mark
+    var charLimit = this.charLimit,
+        noPuncRe  = /[.?;:!]/;
+    if (!noPuncRe.test(this.summary.charAt(charLimit))) {
+      while (!noPuncRe.test(this.summary.charAt(charLimit))) {
         charLimit += 1;
       }
     }
