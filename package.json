@@ -20,11 +20,11 @@
     "LEGO Universe News! Forums"
   ],
   "author": "Triangle717 and rioforce",
-  "license": "The MIT License",
+  "license": "MIT License",
   "bugs": {
     "url": "https://github.com/LEGOUniverseNews/LUN-Patcher/issues/"
   },
-  "homepage": "http://legouniversenews.forummotion.com/",
+  "homepage": "http://LEGOUniverseNews.forummotion.com/",
   "dependencies": {
     "perfect-scrollbar": ">=0.5.8"
   },
