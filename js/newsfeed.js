@@ -52,7 +52,7 @@
    */
   BlogPost.prototype.summarize = function() {
     // Strip HTML tags except for white listed ones
-    var tagsRe   = /<(?!\/?(?:p|div)).+?>/gi;
+    var tagsRe   = /<(?!\/??(?:p|div)).+?>/gi;
     this.summary = this.summary.replace(tagsRe, "");
     this.title   = this.title.replace(tagsRe, "");
 
