@@ -1,6 +1,6 @@
 {
   "name": "LUN-Patcher",
-  "version": "2.2.2",
+  "version": "2.2.4",
   "description": "News widget for LEGO Universe News! Forums",
   "main": "index.html",
   "scripts": {

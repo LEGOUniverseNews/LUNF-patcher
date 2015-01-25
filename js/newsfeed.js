@@ -1,3 +1,15 @@
+/*
+ * LEGO Universe News! Patcher
+ *
+ * Created 2013-2015 Triangle717 & rioforce
+ * <http://Triangle717.WordPress.com/>
+ * <http://rioforce.WordPress.com/>
+ *
+ * Licensed under The MIT License
+ * <http://opensource.org/licenses/MIT>
+*/
+
+
 (function($) {
   "use strict";
 
@@ -7,7 +19,7 @@
    */
   function displayNews() {
     var $container = $("#news-feed");
-    posts.forEach(function(value, index) {
+    posts.forEach(function(value) {
       $container.append(value.container);
       $(value.selector).append("<a class='post-url post-title' target='_blank' href='#'></a>");
       $(value.selector).append("<div class='post-summary'></div>");
@@ -27,7 +39,7 @@
    * @param {String} summary Post summary.
    */
   function BlogPost(id, title, url, summary) {
-    this.id = "post-" + id.substr(-4);
+    this.id = "post-" + id.toString();
     this.url = url;
     this.title = title;
     this.summary = summary;
@@ -81,10 +93,10 @@
     success: [
       function(data) {
         console.log("Fetching news feed from LEGOUniverseNews.WordPress.com");
-        data.posts.forEach(function(details) {
+        data.posts.forEach(function(post) {
 
           // Create the post object
-          var newsPost = new BlogPost(details.guid, details.title, details.short_URL, details.content);
+          var newsPost = new BlogPost(post.ID, post.title, post.short_URL, post.content);
           newsPost.summarize();
           posts.push(newsPost);
         });
