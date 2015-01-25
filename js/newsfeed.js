@@ -100,7 +100,6 @@
           newsPost.summarize();
           posts.push(newsPost);
         });
-    }, displayNews],
       }, displayNews],
 
     error: function() {
