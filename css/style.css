@@ -47,24 +47,11 @@ iframe { border: none; }
   z-index: 1000;
 }
 
-/* Container for the player */
-#video-div {
-  position: absolute;
-  width: 22.188em;
-  top: 3.125em;
-  left: 2.500em;
-  height: 16.875em;
-}
-
-/* Size and position of YouTube embed player */
+/* YouTube player */
 #yt-video {
-  position: relative;
-  overflow: hidden;
-  width: 22.188em;
-  top: 1.0em;
-  left: 0.125em;
-  height: 16.875em;
-  z-index: 1;
+  position: absolute;
+  top: 4.1em;
+  left: 2.6em;
 }
 
 /* Error message in case the video is not available */
