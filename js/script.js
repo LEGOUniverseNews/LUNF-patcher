@@ -17,7 +17,7 @@ $(document).ready(function() {
   // Gets a random YouTube video from a specified playlist within parameters.
   // Assign value for a specific video ID.
   // Otherwise, leave defined as `null` (do not enclose in quotes).
-  var ytVideoID = null,
+  var ytVideoID = "uyEJBDJIwFA",
 
     // Root YouTube domain and player parameters. Full list and definitions at
     // https://developers.google.com/youtube/player_parameters#Parameters
