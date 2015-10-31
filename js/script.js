@@ -17,7 +17,7 @@ $(document).ready(function() {
   // Gets a random YouTube video from a specified playlist within parameters.
   // Assign value for a specific video ID.
   // Otherwise, leave defined as `null` (do not enclose in quotes).
-  var ytVideoID = "uyEJBDJIwFA",
+  var ytVideoID = null,
 
     // Root YouTube domain and player parameters. Full list and definitions at
     // https://developers.google.com/youtube/player_parameters#Parameters
@@ -26,7 +26,7 @@ $(document).ready(function() {
 
     // **** ADD PLAYLIST URL HERE ****
     // YouTube playlist id, i.e. the "list" parameter in regular YouTube queries.
-    playlistID = "PLRNbTEZ7dhL2zevm9nuPeLBlBEjr1fyzv",
+    playlistID = "PLRNbTEZ7dhL3xskCf5yhBMiR9m6K0F6kW",
     apiBaseUrl = "https://gdata.youtube.com/feeds/api/playlists/",
 
     // Higher numbers will lead to bigger requests, but more varied videos.
